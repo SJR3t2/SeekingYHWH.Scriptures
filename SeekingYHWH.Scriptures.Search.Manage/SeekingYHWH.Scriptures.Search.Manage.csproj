@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+		<TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+		<RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
+</Project>

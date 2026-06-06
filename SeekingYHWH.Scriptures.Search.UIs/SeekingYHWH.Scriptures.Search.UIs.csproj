@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.Online\SeekingYHWH.Scriptures.Search.Online.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Searchings\SeekingYHWH.Scriptures.Searchings.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.ExcludedPage">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="OT">
+                <TextCell Text="Esther"/>
+                <TextCell Text="Songs of Solomon"/>
+            </TableSection>
+            <TableSection Title="D&amp;C LDS">
+                <TextCell Text="D&amp;C 77"/>
+                <TextCell Text="D&amp;C 102" Detail="https://seekingyhwh.org/expose/dnc/1835-5/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 108"/>
+                <TextCell Text="D&amp;C 109"/>
+                <TextCell Text="D&amp;C 110"/>
+                <TextCell Text="D&amp;C 111"/>
+                <TextCell Text="D&amp;C 113"/>
+                <TextCell Text="D&amp;C 114"/>
+                <TextCell Text="D&amp;C 115" Detail="https://seekingyhwh.org/expose/dnc/lds-115/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 118" Detail="https://seekingyhwh.org/expose/dnc/lds-118/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 123"/>
+                <TextCell Text="D&amp;C 124" Detail="https://seekingyhwh.org/expose/dnc/1844-103/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 126"/>
+                <TextCell Text="D&amp;C 127" Detail="https://seekingyhwh.org/expose/dnc/1844-105/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 128" Detail="https://seekingyhwh.org/expose/dnc/1844-106/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 129"/>
+                <TextCell Text="D&amp;C 130"/>
+                <TextCell Text="D&amp;C 131"/>
+                <TextCell Text="D&amp;C 132" Detail="https://seekingyhwh.org/resources/marriage/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 135"/>
+                <TextCell Text="D&amp;C 136"/>
+                <TextCell Text="D&amp;C 137" Detail="https://seekingyhwh.org/expose/dnc/lds-137/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 138" Detail="https://seekingyhwh.org/expose/dnc/lds-138/" Tapped="OnLink"/>
+                <TextCell Text="OD 1"/>
+                <TextCell Text="OD 2"/>
+            </TableSection>
+            <TableSection Title="D&amp;C RLDS">
+                <TextCell Text="D&amp;C 99" Detail="https://seekingyhwh.org/expose/dnc/1835-5/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 107" Detail="https://seekingyhwh.org/expose/dnc/1844-103/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 109" Detail="https://seekingyhwh.org/expose/dnc/1844-105/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 110" Detail="https://seekingyhwh.org/expose/dnc/1844-106/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 113"/>
+                <TextCell Text="D&amp;C 114"/>
+                <TextCell Text="D&amp;C 115"/>
+                <TextCell Text="D&amp;C 116" Detail="https://seekingyhwh.org/expose/dnc/rlds-116/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 117"/>
+                <TextCell Text="D&amp;C 118"/>
+                <TextCell Text="D&amp;C 119"/>
+                <TextCell Text="D&amp;C 120"/>
+                <TextCell Text="D&amp;C 121"/>
+                <TextCell Text="D&amp;C 122"/>
+                <TextCell Text="D&amp;C 123"/>
+                <TextCell Text="D&amp;C 124"/>
+                <TextCell Text="D&amp;C 125"/>
+                <TextCell Text="D&amp;C 126"/>
+                <TextCell Text="D&amp;C 127"/>
+                <TextCell Text="D&amp;C 128"/>
+                <TextCell Text="D&amp;C 129"/>
+                <TextCell Text="D&amp;C 130"/>
+                <TextCell Text="D&amp;C 131"/>
+                <TextCell Text="D&amp;C 132"/>
+                <TextCell Text="D&amp;C 133"/>
+                <TextCell Text="D&amp;C 134"/>
+                <TextCell Text="D&amp;C 135"/>
+                <TextCell Text="D&amp;C 136"/>
+                <TextCell Text="D&amp;C 137"/>
+                <TextCell Text="D&amp;C 138"/>
+                <TextCell Text="D&amp;C 139"/>
+                <TextCell Text="D&amp;C 140"/>
+                <TextCell Text="D&amp;C 141"/>
+                <TextCell Text="D&amp;C 142"/>
+                <TextCell Text="D&amp;C 143"/>
+                <TextCell Text="D&amp;C 144"/>
+                <TextCell Text="D&amp;C 145"/>
+                <TextCell Text="D&amp;C 146"/>
+                <TextCell Text="D&amp;C 147"/>
+                <TextCell Text="D&amp;C 148"/>
+                <TextCell Text="D&amp;C 149"/>
+                <TextCell Text="D&amp;C 150"/>
+                <TextCell Text="D&amp;C 151"/>
+                <TextCell Text="D&amp;C 152"/>
+                <TextCell Text="D&amp;C 153"/>
+                <TextCell Text="D&amp;C 154"/>
+                <TextCell Text="D&amp;C 155"/>
+                <TextCell Text="D&amp;C 156"/>
+                <TextCell Text="D&amp;C 157"/>
+                <TextCell Text="D&amp;C 158"/>
+                <TextCell Text="D&amp;C 159"/>
+                <TextCell Text="D&amp;C 160"/>
+                <TextCell Text="D&amp;C 161"/>
+                <TextCell Text="D&amp;C 162"/>
+                <TextCell Text="D&amp;C 163"/>
+                <TextCell Text="D&amp;C 164"/>
+                <TextCell Text="D&amp;C 165"/>
+            </TableSection>
+            <TableSection Title="D&amp;C 1835">
+                <TextCell Text="D&amp;C 5" Detail="https://seekingyhwh.org/expose/dnc/1835-5/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="D&amp;C 1844">
+                <TextCell Text="D&amp;C 5" Detail="https://seekingyhwh.org/expose/dnc/1835-5/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 103" Detail="https://seekingyhwh.org/expose/dnc/1844-103/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 105" Detail="https://seekingyhwh.org/expose/dnc/1844-105/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 106" Detail="https://seekingyhwh.org/expose/dnc/1844-106/" Tapped="OnLink"/>
+                <TextCell Text="D&amp;C 111"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

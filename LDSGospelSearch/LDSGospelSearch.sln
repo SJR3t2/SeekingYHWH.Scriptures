@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDSGospelSearch.Console", "LDSGospelSearch.Console\LDSGospelSearch.Console.csproj", "{E5AD2E99-BF11-4745-9F93-2DE8C32F9A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDSGospelLanguages", "LDSGospelLanguages\LDSGospelLanguages.csproj", "{1E1CCFD8-D8E3-463A-AA1D-EB07BFD23BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDSGospelSearch.GUI", "LDSGospelSearch.GUI\LDSGospelSearch.GUI.csproj", "{190C71D6-C459-43F6-8DAE-F0D226CC0FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDSGospelSearch.Library", "LDSGospelSearch.Library\LDSGospelSearch.Library.csproj", "{DCB13096-B7FA-4D4E-88A8-693632024955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LDSGospelSearch.Library.Search", "LDSGospelSearch.Library.Search\LDSGospelSearch.Library.Search.csproj", "{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "LDSGospelSearch.GUI.Setup", "LDSGospelSearch.GUI.Setup\LDSGospelSearch.GUI.Setup.vdproj", "{6E92AE0B-0DD1-448F-83F8-B783BB049CBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys", "..\SeekingYHWH.Scriptures.Querys\SeekingYHWH.Scriptures.Querys.csproj", "{CC8D8C43-5094-4D6C-8815-510DF1B59F1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys.UnitTests", "..\SeekingYHWH.Scriptures.Querys.UnitTests\SeekingYHWH.Scriptures.Querys.UnitTests.csproj", "{EC75F3BD-4D76-4EEF-9C32-4D83EE8E1BAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys.XML", "..\SeekingYHWH.Scriptures.Querys.XML\SeekingYHWH.Scriptures.Querys.XML.csproj", "{C6FC4BA8-14CC-46DC-9CFB-5817959BD2F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys.LISP", "..\SeekingYHWH.Scriptures.Querys.LISP\SeekingYHWH.Scriptures.Querys.LISP.csproj", "{98E8DDBA-B501-4B85-98CB-A35A0449D889}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys.LISP.UnitTests", "..\SeekingYHWH.Scriptures.Querys.LISP.UnitTests\SeekingYHWH.Scriptures.Querys.LISP.UnitTests.csproj", "{A3426C1D-DD56-4C18-AD57-A116B4DA9161}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeekingYHWH.Scriptures.Querys.Parsers", "..\SeekingYHWH.Scriptures.Querys.Parsers\SeekingYHWH.Scriptures.Querys.Parsers.csproj", "{E0A5623A-5F34-4EB2-B007-E7AC1E9392E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors", "..\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj", "{30FDE4B9-7BA6-A55E-2C5F-F62AC25CB111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures", "..\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj", "{70824B07-1F45-71A5-2CBB-2497038081B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5AD2E99-BF11-4745-9F93-2DE8C32F9A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AD2E99-BF11-4745-9F93-2DE8C32F9A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AD2E99-BF11-4745-9F93-2DE8C32F9A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AD2E99-BF11-4745-9F93-2DE8C32F9A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1CCFD8-D8E3-463A-AA1D-EB07BFD23BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1CCFD8-D8E3-463A-AA1D-EB07BFD23BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1CCFD8-D8E3-463A-AA1D-EB07BFD23BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1CCFD8-D8E3-463A-AA1D-EB07BFD23BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190C71D6-C459-43F6-8DAE-F0D226CC0FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190C71D6-C459-43F6-8DAE-F0D226CC0FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190C71D6-C459-43F6-8DAE-F0D226CC0FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190C71D6-C459-43F6-8DAE-F0D226CC0FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB13096-B7FA-4D4E-88A8-693632024955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB13096-B7FA-4D4E-88A8-693632024955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB13096-B7FA-4D4E-88A8-693632024955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB13096-B7FA-4D4E-88A8-693632024955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E92AE0B-0DD1-448F-83F8-B783BB049CBD}.Debug|Any CPU.ActiveCfg = Debug
+		{6E92AE0B-0DD1-448F-83F8-B783BB049CBD}.Release|Any CPU.ActiveCfg = Release
+		{CC8D8C43-5094-4D6C-8815-510DF1B59F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8D8C43-5094-4D6C-8815-510DF1B59F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8D8C43-5094-4D6C-8815-510DF1B59F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8D8C43-5094-4D6C-8815-510DF1B59F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC75F3BD-4D76-4EEF-9C32-4D83EE8E1BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC75F3BD-4D76-4EEF-9C32-4D83EE8E1BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC75F3BD-4D76-4EEF-9C32-4D83EE8E1BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC75F3BD-4D76-4EEF-9C32-4D83EE8E1BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FC4BA8-14CC-46DC-9CFB-5817959BD2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FC4BA8-14CC-46DC-9CFB-5817959BD2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FC4BA8-14CC-46DC-9CFB-5817959BD2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FC4BA8-14CC-46DC-9CFB-5817959BD2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E8DDBA-B501-4B85-98CB-A35A0449D889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E8DDBA-B501-4B85-98CB-A35A0449D889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E8DDBA-B501-4B85-98CB-A35A0449D889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E8DDBA-B501-4B85-98CB-A35A0449D889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3426C1D-DD56-4C18-AD57-A116B4DA9161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3426C1D-DD56-4C18-AD57-A116B4DA9161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3426C1D-DD56-4C18-AD57-A116B4DA9161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3426C1D-DD56-4C18-AD57-A116B4DA9161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A5623A-5F34-4EB2-B007-E7AC1E9392E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A5623A-5F34-4EB2-B007-E7AC1E9392E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A5623A-5F34-4EB2-B007-E7AC1E9392E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A5623A-5F34-4EB2-B007-E7AC1E9392E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FDE4B9-7BA6-A55E-2C5F-F62AC25CB111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FDE4B9-7BA6-A55E-2C5F-F62AC25CB111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FDE4B9-7BA6-A55E-2C5F-F62AC25CB111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FDE4B9-7BA6-A55E-2C5F-F62AC25CB111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70824B07-1F45-71A5-2CBB-2497038081B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70824B07-1F45-71A5-2CBB-2497038081B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70824B07-1F45-71A5-2CBB-2497038081B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70824B07-1F45-71A5-2CBB-2497038081B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25AF92C0-CDD9-4F8C-8C74-4ED9F896A6A0}
+	EndGlobalSection
+EndGlobal

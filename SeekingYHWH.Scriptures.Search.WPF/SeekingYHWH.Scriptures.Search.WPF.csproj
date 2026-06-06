@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <AssemblyName>ScripturesSearch.WPF</AssemblyName>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys.LISP\SeekingYHWH.Scriptures.Querys.LISP.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys\SeekingYHWH.Scriptures.Querys.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.Online\SeekingYHWH.Scriptures.Search.Online.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.UIs\SeekingYHWH.Scriptures.Search.UIs.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Searchings\SeekingYHWH.Scriptures.Searchings.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
+</Project>

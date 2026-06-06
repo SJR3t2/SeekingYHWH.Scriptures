@@ -1,0 +1,76 @@
+﻿<Window x:Class="LDSGospelSearch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LDSGospelSearch"
+        mc:Ignorable="d"
+        Title="LDSGospelSearch - SeekingYHWH" Height="450" Width="800" Loaded="OnLoaded">
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="Query _Load" Click="OnQueryLoad"/>
+                <MenuItem Header="_Query Save" Click="OnQuerySave"/>
+                <Separator/>
+                <MenuItem Header="Scriptures _Save" Click="OnScripturesSave"/>
+                <Separator/>
+                <MenuItem Header="_Exit" Click="OnExit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Query C_lear" Click="OnQueryClear"/>
+                <MenuItem Header="Query C_opy" Click="OnQueryCopy"/>
+                <MenuItem Header="Query P_aste" Click="OnQueryPaste"/>
+                <Separator/>
+                <MenuItem Header="Scriptures Clea_r" Click="OnScripturesClear"/>
+                <MenuItem Header="Scriptures _Copy" Click="OnScripturesCopy"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_Get required Gospel Library" Click="OnGetGospelLibrary"/>
+                <MenuItem Header="_What's excluded" Click="OnWhatsExcluded"/>
+                <MenuItem Header="_Query" Click="OnHelpQuery"/>
+                <MenuItem Header="_Regex">
+                    <MenuItem Header="Microsoft Documentation" Click="OnHelpRegexMSDoc"/>
+                    <MenuItem Header="Microsoft Learn" Click="OnHelpRegexMSLearn"/>
+                    <MenuItem Header="Microsoft Cheat Sheet" Click="OnHelpRegexMSCheat"/>
+                    <MenuItem Header="Mikesdotnetting Cheat Sheet" Click="OnHelpRegexMikesCheat"/>
+                    <MenuItem Header="Medium Cheatsheet" Click="OnHelpRegexMediumCheat"/>
+                    <MenuItem Header="C# Corner Regex" Click="OnHelpRegexCornerRegex"/>
+                    <MenuItem Header="C# Corner Regex Examples" Click="OnHelpRegexCornerExamples"/>
+                    <MenuItem Header="Regex Storm Tester" Click="OnHelpRegexStormTester"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Examples">
+                    <MenuItem Header="Godhead" Click="OnExampleGodhead"/>
+                    <MenuItem Header="All Things" Click="OnExampleAllThings"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="SeekingYHWH _Blog" Click="OnBlog"/>
+                <MenuItem Header="SeekingYHWH _Software" Click="OnSoftware"/>
+                <MenuItem Header="SeekingYHWH LDSGospelSearch _Download" Click="OnDownload"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Scriptures: 0" x:Name="scripturesCount"/>
+            </StatusBarItem>
+        </StatusBar>
+        <StackPanel DockPanel.Dock="Top">
+            <Label Content="Query:" HorizontalAlignment="Left"/>
+            <TextBox TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Height="50" x:Name="queryText"/>
+            <Button Content="Search" HorizontalAlignment="Right" IsDefault="True" Click="OnSearch" x:Name="searchButton"/>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Left">
+            <ComboBox x:Name="languages" SelectionChanged="OnLanguageChanged"/>
+            <CheckBox Content="OT" IsEnabled="False" Checked="OnOTChecked" Unchecked="OnOTUnchecked" x:Name="ot"/>
+            <CheckBox Content="NT" IsEnabled="False" Checked="OnNTChecked" Unchecked="OnNTUnchecked" x:Name="nt"/>
+            <CheckBox Content="BoM" IsEnabled="False" Checked="OnBoMChecked" Unchecked="OnBoMUnchecked" x:Name="bom"/>
+            <CheckBox Content="DnC" IsEnabled="False" Checked="OnDnCChecked" Unchecked="OnDnCUnchecked" x:Name="dnc"/>
+            <CheckBox Content="PGP" IsEnabled="False" Checked="OnPGPChecked" Unchecked="OnPGPUnchecked" x:Name="pgp"/>
+            <CheckBox Content="JST" IsEnabled="False" Checked="OnJSTChecked" Unchecked="OnJSTUnchecked" x:Name="jst"/>
+            <RadioButton Content="Sentence" Checked="OnSentenceChecked" x:Name="sentence"/>
+            <RadioButton Content="Verse" Checked="OnVerseChecked" x:Name="verse"/>
+            <RadioButton Content="Chapter" Checked="OnChapterChecked" x:Name="chapter"/>
+        </StackPanel>
+        <TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" x:Name="scripturesText"/>
+    </DockPanel>
+</Window>

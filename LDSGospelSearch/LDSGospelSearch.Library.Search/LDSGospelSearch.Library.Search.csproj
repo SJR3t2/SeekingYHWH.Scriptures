@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACE3B4CE-2AC3-4760-A16B-C56AEEA6823E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LDSGospelSearch</RootNamespace>
+    <AssemblyName>LDSGospelSearch.Library.Search</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfo.Company.cs">
+      <Link>Properties\AssemblyInfo.Company.cs</Link>
+    </Compile>
+    <Compile Include="..\..\AssemblyInfo.Revision.cs">
+      <Link>Properties\AssemblyInfo.Revision.cs</Link>
+    </Compile>
+    <Compile Include="SearchState.cs" />
+    <Compile Include="SearchMatch.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="SearchStates.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj">
+      <Project>{30fde4b9-7ba6-a55e-2c5f-f62ac25cb111}</Project>
+      <Name>SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj">
+      <Project>{70824b07-1f45-71a5-2cbb-2497038081b4}</Project>
+      <Name>SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SeekingYHWH.Scriptures.Querys\SeekingYHWH.Scriptures.Querys.csproj">
+      <Project>{cc8d8c43-5094-4d6c-8815-510df1b59f1e}</Project>
+      <Name>SeekingYHWH.Scriptures.Querys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LDSGospelSearch.Library\LDSGospelSearch.Library.csproj">
+      <Project>{dcb13096-b7fa-4d4e-88a8-693632024955}</Project>
+      <Name>LDSGospelSearch.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

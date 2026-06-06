@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+    <AssemblyName>ScripturesConvertPassages.WPF</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="app.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.ConvertPassages.UI\SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.ConvertPassages\SeekingYHWH.Scriptures.ConvertPassages.csproj" />
+	</ItemGroup>
+
+</Project>

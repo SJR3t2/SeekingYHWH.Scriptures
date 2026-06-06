@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCB13096-B7FA-4D4E-88A8-693632024955}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LDSGospelSearch</RootNamespace>
+    <AssemblyName>LDSGospelSearch.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>%24/SeekingYHWH/Scriptures/LDSGospelSearch/LDSGospelSearch.Library</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://sjr3t2.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfo.Company.cs">
+      <Link>Properties\AssemblyInfo.Company.cs</Link>
+    </Compile>
+    <Compile Include="..\..\AssemblyInfo.Revision.cs">
+      <Link>Properties\AssemblyInfo.Revision.cs</Link>
+    </Compile>
+    <Compile Include="CatalogInfo.cs" />
+    <Compile Include="LanguageInfo.cs" />
+    <Compile Include="Library.cs" />
+    <Compile Include="NavigationInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.119</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj">
+      <Project>{30fde4b9-7ba6-a55e-2c5f-f62ac25cb111}</Project>
+      <Name>SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj">
+      <Project>{70824b07-1f45-71a5-2cbb-2497038081b4}</Project>
+      <Name>SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

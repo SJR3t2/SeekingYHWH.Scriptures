@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys.Parsers\SeekingYHWH.Scriptures.Querys.Parsers.csproj" />
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys\SeekingYHWH.Scriptures.Querys.csproj" />
+	</ItemGroup>
+
+</Project>

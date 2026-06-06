@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.ExamplesPage">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="General">
+                <TextCell Text="God" Detail="Regex(\bGod)" Tapped="OnTapped"/>
+                <TextCell Text="Godhead" Detail="And(Or(Regex(\bGod),Regex(\bFather)),Or(Regex(\bLord),Regex(\bSon),Regex(\bJesus),Regex(\bChrist),Regex(\bMessiah)),Or(Regex(\bspirit),Regex(\bghost),Regex(\bwill)))" Tapped="OnTapped"/>
+            </TableSection>
+            <TableSection Title="Torah">
+                <TextCell Text="All Things (can be Torah depending on context)" Detail="Index(&quot;all things&quot;)" Tapped="OnTapped"/>
+                <TextCell Text="Torah" Detail="Or(Regex(\bjudgements\b),Regex(\bstatutes\b),Regex(\bcommandments\b),Regex(\blaws\b))" Tapped="OnTapped"/>
+            </TableSection>
+            <TableSection Title="Law of Moses">
+                <TextCell Text="Law of Moses" Detail="Or(Regex(\bperformances\b),Regex(\bordinances\b))" Tapped="OnTapped"/>
+            </TableSection>
+            <TableSection Title="Calendar">
+                <TextCell Text="Sabbaths" Detail="Regex(\bsabbaths\b)" Tapped="OnTapped"/>
+                <TextCell Text="New Moon" Detail="Regex(&quot;\bnew moon\b&quot;)" Tapped="OnTapped"/>
+                <TextCell Text="Saturday" Detail="Regex(\bSaturday\b)" Tapped="OnTapped"/>
+                <TextCell Text="Sunday" Detail="Regex(\bSunday\b)" Tapped="OnTapped"/>
+                <TextCell Text="Monday" Detail="Regex(\bMonday\b)" Tapped="OnTapped"/>
+                <TextCell Text="Friday" Detail="Regex(\bFriday\b)" Tapped="OnTapped"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="SeekingYHWH.Scriptures.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeekingYHWH.Scriptures"
+        mc:Ignorable="d"
+        Title="Scriptures Convert Passages - SeekingYHWH"
+		  Height="450" Width="800">
+	<DockPanel LastChildFill="True">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_File">
+				<MenuItem Header="_Exit" Click="OnExit"/>
+			</MenuItem>
+			<MenuItem Header="_Edit">
+				<MenuItem Header="Converted _Copy" Click="OnCopy"/>
+				<MenuItem Header="Converted C_lear" Click="OnCopy"/>
+			</MenuItem>
+			<MenuItem Header="Options" Click="OnOptions"/>
+			<MenuItem Header="_Help">
+				<MenuItem Header="A_bout" Click="OnAbout"/>
+				<MenuItem Header="_Help" Click="OnHelp"/>
+				<MenuItem Header="_What's Excluded" Click="OnWhatsExcluded"/>
+				<Separator/>
+				<MenuItem Header="SeekingYHWH _About" Click="OnLink" DataContext="http://seekingyhwh.org/about/"/>
+				<MenuItem Header="SeekingYHWH _Posts" Click="OnLink" DataContext="http://seekingyhwh.org/posts/"/>
+				<MenuItem Header="SeekingYHWH _Scripture Study" Click="OnLink" DataContext="http://seekingyhwh.org/scripture-study/"/>
+				<MenuItem Header="SeekingYHWH _Resources" Click="OnLink" DataContext="http://seekingyhwh.org/resources/"/>
+				<MenuItem Header="SeekingYHWH _Torah" Click="OnLink" DataContext="http://seekingyhwh.org/torah/"/>
+				<MenuItem Header="SeekingYHWH _Law of Moses" Click="OnLink" DataContext="http://seekingyhwh.org/law-of-moses/"/>
+				<MenuItem Header="SeekingYHWH Lectures on _Faith" Click="OnLink" DataContext="http://seekingyhwh.org/lectures-on-faith/"/>
+				<MenuItem Header="SeekingYHWH S_oftware" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/"/>
+				<MenuItem Header="SeekingYHWH Convert Passages _Download" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/scriptures-convert-passages/"/>
+				<MenuItem Header="SeekingYHWH _Contact" Click="OnLink" DataContext="https://seekingyhwh.org/contact/"/>
+			</MenuItem>
+		</Menu>
+		<StatusBar DockPanel.Dock="Bottom">
+         <StatusBarItem>
+				<TextBlock Text="Status:" x:Name="status"/>
+         </StatusBarItem>
+		</StatusBar>
+		<Label DockPanel.Dock="Top" Content="Passages:" HorizontalAlignment="Left"/>
+		<TextBox DockPanel.Dock="Top" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Height="50" x:Name="passagesText"/>
+		<Grid DockPanel.Dock="Top">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" x:Name="fromLabel"/>
+			<Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Content="->" x:Name="directionButton"/>
+			<Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" x:Name="toLabel"/>
+			<Button Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Content="Clear" Click="OnClear"/>
+			<Button Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" Content="Copy" Click="OnCopy"/>
+			<Button Grid.Row="0" Grid.Column="5" HorizontalAlignment="Right" Content="Convert" IsDefault="True" Click="OnConvert"/>
+		</Grid>
+		<TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" x:Name="convertedText"/>
+	</DockPanel>
+</Window>

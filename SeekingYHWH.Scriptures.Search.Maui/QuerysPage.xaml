@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.QuerysPage">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Logic">
+                <TextCell Text="And" Detail="And(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Or" Detail="Or(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Xor" Detail="Xor(Query(...),Query(...))" Tapped="OnQuery"/>
+                <TextCell Text="Not" Detail="Not(Query(...))" Tapped="OnQuery"/>
+                <TextCell Text="NAnd" Detail="NAnd(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NOr" Detail="NOr(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NXor" Detail="NXor(Query(...),Query(...))" Tapped="OnQuery"/>
+                <TextCell Text="Equals" Detail="Equals(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Same" Detail="Same(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Diff" Detail="Diff(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Trues" Detail="Trues(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="Falses" Detail="Falses(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NEquals" Detail="NEquals(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NSame" Detail="NSame(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NDiff" Detail="NDiff(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NTrues" Detail="NTrues(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="NFalse" Detail="NFalses(Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+            </TableSection>
+            <TableSection Title="Count">
+                <TextCell Text="CountTruesLT" Detail="CountTruesLT(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountTruesLE" Detail="CountTruesLE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountTruesEQ" Detail="CountTruesEQ(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountTruesNE" Detail="CountTruesNE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountTruesGE" Detail="CountTruesGE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountTruesGT" Detail="CountTruesGT(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesLT" Detail="CountFalsesLT(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesLE" Detail="CountFalsesLE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesEQ" Detail="CountFalsesEQ(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesNE" Detail="CountFalsesNE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesGE" Detail="CountFalsesGE(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountFalsesGT" Detail="CountFalsesGT(number,Query(...),Query(...),Query(...)...)" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexLT" Detail="CountRegexLT(number,pattern) or CountRegexLT(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexLE" Detail="CountRegexLE(number,pattern) or CountRegexLE(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexEQ" Detail="CountRegexEQ(number,pattern) or CountRegexEQ(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexNE" Detail="CountRegexNE(number,pattern) or CountRegexNE(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexGE" Detail="CountRegexGE(number,pattern) or CountRegexGE(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountRegexGT" Detail="CountRegexGT(number,pattern) or CountRegexGT(number,pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexLT" Detail="CountIndexLT(number,text) or CoutnIndexLT(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexLE" Detail="CountIndexLE(number,text) or CoutnIndexLE(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexEQ" Detail="CountIndexEQ(number,text) or CoutnIndexEQ(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexNE" Detail="CountIndexNE(number,text) or CoutnIndexNE(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexGE" Detail="CountIndexGE(number,text) or CoutnIndexGE(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="CountIndexGT" Detail="CountIndexGT(number,text) or CoutnIndexGT(number,text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+            </TableSection>
+            <TableSection Title="Search">
+                <TextCell Text="Regex" Detail="Regex(pattern) or Regex(pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="Index" Detail="Index(text) or Index(text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="Contains" Detail="Contains(text)" Tapped="OnQuery"/>
+                <TextCell Text="NRegex" Detail="NRegex(pattern) or Regex(pattern,{ IgnoreCase, None})" Tapped="OnQuery"/>
+                <TextCell Text="NIndex" Detail="NIndex(text) or Index(text,{ CurrentCultureIgnoreCase, CurrentCulture, InvariantCultureIgnoreCase, InvariantCulture, OrdinalIgnoreCase, Ordinal })" Tapped="OnQuery"/>
+                <TextCell Text="NContains" Detail="NContains(text)" Tapped="OnQuery"/>
+            </TableSection>
+            <TableSection Title="Constants">
+                <TextCell Text="True" Detail="True()" Tapped="OnQuery"/>
+                <TextCell Text="False" Detail="False()" Tapped="OnQuery"/>
+            </TableSection>
+            <TableSection Title="Text / Pattern">
+                <TextCell Text="Text / Pattern" Detail="ABC123 or &quot;A B C 1 2 3&quot;"/>
+            </TableSection>
+            <TableSection Title="Regex Pattern">
+                <TextCell Text="\b" Detail="word boundary" Tapped="OnText"/>
+                <TextCell Text="\B" Detail="not word boundary" Tapped="OnText"/>
+                <TextCell Text="\&lt;" Detail="start of word" Tapped="OnText"/>
+                <TextCell Text="\&gt;" Detail="end of word" Tapped="OnText"/>
+                <TextCell Text="\d" Detail="digit" Tapped="OnText"/>
+                <TextCell Text="\D" Detail="not digit" Tapped="OnText"/>
+                <TextCell Text="\s" Detail="white-space" Tapped="OnText"/>
+                <TextCell Text="\S" Detail="not white-space" Tapped="OnText"/>
+                <TextCell Text="\w" Detail="word" Tapped="OnText"/>
+                <TextCell Text="\W" Detail="not word" Tapped="OnText"/>
+                <TextCell Text="\." Detail="." Tapped="OnText"/>
+                <TextCell Text="\(" Detail="(" Tapped="OnText"/>
+                <TextCell Text="\)" Detail=")" Tapped="OnText"/>
+                <TextCell Text="\?" Detail="?" Tapped="OnText"/>
+                <TextCell Text="*" Detail="zero or more occurrences greedy" Tapped="OnText"/>
+                <TextCell Text="*?" Detail="zero or more occurrences ungreedy" Tapped="OnText"/>
+                <TextCell Text="?" Detail="zero or one occurrences greedy" Tapped="OnText"/>
+                <TextCell Text="??" Detail="zero or one occurrences ungreedy" Tapped="OnText"/>
+                <TextCell Text="+" Detail="one or more occurrences greedy" Tapped="OnText"/>
+                <TextCell Text="+?" Detail="one or more occurrences ungreedy" Tapped="OnText"/>
+                <TextCell Text="\{x\}" Detail="x occurrences" Tapped="OnText"/>
+                <TextCell Text="\{x,\}" Detail="x or more occurrences greedy" Tapped="OnText"/>
+                <TextCell Text="\{x,\}?" Detail="x or more occurrences ungreedy" Tapped="OnText"/>
+                <TextCell Text="\{x,y\}" Detail="x through y occurrences greedy" Tapped="OnText"/>
+                <TextCell Text="\{x,y\}?" Detail="x through y occurrences ungreedy" Tapped="OnText"/>
+                <TextCell Text="." Detail="any character" Tapped="OnText"/>
+                <TextCell Text="(x|y)" Detail="x or y" Tapped="OnText"/>
+                <TextCell Text="[xyz]" Detail="x or y or z" Tapped="OnText"/>
+                <TextCell Text="[^xyz]" Detail="not x or y or z" Tapped="OnText"/>
+                <TextCell Text="[A-Z]" Detail="A or B or C ... X or Y or Z" Tapped="OnText"/>
+                <TextCell Text="[a-z]" Detail="a or b or c ... x or y or z" Tapped="OnText"/>
+                <TextCell Text="[0-9]" Detail="0 or 1 or 2 ... 7 or 8 or 9" Tapped="OnText"/>
+            </TableSection>
+            <TableSection Title="Regex Links">
+                <TextCell Text="Microsoft Documentation" Detail="https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-7.0" Tapped="OnLink"/>
+                <TextCell Text="Microsoft Learn" Detail="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions" Tapped="OnLink"/>
+                <TextCell Text="Microsoft Cheat Sheet" Detail="https://learn.microsoft.com/en-us/previous-versions/troubleshoot/winautomation/process-development-tips/text-manipulation/regular-expressions-cheat-sheet" Tapped="OnLink"/>
+                <TextCell Text="Mikesdotnetting Cheat Sheet" Detail="https://www.mikesdotnetting.com/article/46/c-regular-expressions-cheat-sheet" Tapped="OnLink"/>
+                <TextCell Text="Medium Cheatsheet" Detail="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285" Tapped="OnLink"/>
+                <TextCell Text="C# Corner Regex" Detail="https://www.c-sharpcorner.com/article/regular-expressions-in-net/" Tapped="OnLink"/>
+                <TextCell Text="C# Corner Regex Examples" Detail="https://www.c-sharpcorner.com/article/c-sharp-regex-examples/" Tapped="OnLink"/>
+                <TextCell Text="Regex Storm Tester" Detail="http://regexstorm.net/tester" Tapped="OnLink"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

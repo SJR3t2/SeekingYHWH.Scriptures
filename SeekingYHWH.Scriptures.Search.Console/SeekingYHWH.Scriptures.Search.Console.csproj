@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SeekingYHWH.Scriptures</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys.LISP\SeekingYHWH.Scriptures.Querys.LISP.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Querys\SeekingYHWH.Scriptures.Querys.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Searchings\SeekingYHWH.Scriptures.Searchings.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
+</Project>

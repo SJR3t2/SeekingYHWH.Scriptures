@@ -1,0 +1,15 @@
+<Project>
+	
+  <PropertyGroup>
+    <Authors>Steven Retz</Authors>
+    <Company>SeekingYHWH</Company>
+		<Copyright>Copyright © SeekingYHWH 2015</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<AssemblyAttribute Include="System.Reflection.AssemblyTrademarkAttribute">
+			<_Parameter1>SeekingYHWH</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
+
+</Project>

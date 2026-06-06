@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Innovoft.Text.JSON" Version="1.3.0" />
+    <PackageReference Include="SharpCompress" Version="0.34.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors\SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures\SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.Manage\SeekingYHWH.Scriptures.Search.Manage.csproj" />
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
+</Project>

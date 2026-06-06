@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.LinksPage">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Author">
+                <TextCell Text="About" Detail="https://seekingyhwh.org/about/" Tapped="OnLink"/>
+                <TextCell Text="Blog" Detail="https://seekingyhwh.org/posts/" Tapped="OnLink"/>
+                <TextCell Text="Nazarene" Detail="https://seekingyhwh.org/resources/nazarene/" Tapped="OnLink"/>
+                <TextCell Text="Resources" Detail="https://seekingyhwh.org/resources/" Tapped="OnLink"/>
+                <TextCell Text="Churches" Detail="https://seekingyhwh.org/resources/churches/" Tapped="OnLink"/>
+                <TextCell Text="Software" Detail="https://seekingyhwh.org/resources/software/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="SeekingYHWH">
+                <TextCell Text="Book of Mormon" Detail="https://seekingyhwh.org/resources/book-of-mormon/" Tapped="OnLink"/>
+                <TextCell Text="Lectures on Faith" Detail="https://seekingyhwh.org/lectures-on-faith/" Tapped="OnLink"/>
+                <TextCell Text="JST / Inspired Version / New Translation of the Bible" Detail="https://seekingyhwh.org/resources/jst-inspired-version-bible/" Tapped="OnLink"/>
+                <TextCell Text="Problematic D&amp;C sections" Detail="https://seekingyhwh.org/expose/dnc/" Tapped="OnLink"/>
+                <TextCell Text="Scripture Study" Detail="https://seekingyhwh.org/scripture-study/" Tapped="OnLink"/>
+                <TextCell Text="Torah" Detail="https://seekingyhwh.org/torah/" Tapped="OnLink"/>
+                <TextCell Text="Kingdom of Heaven" Detail="https://seekingyhwh.org/resources/kingdom-of-heaven//" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Joseph Smith Papers">
+                <TextCell Text="Original Manuscript of the Book of Mormon" Detail="https://www.josephsmithpapers.org/the-papers/revelations-and-translations/jsppr3/jsppr3-sub-om" Tapped="OnLink"/>
+                <TextCell Text="Printer's Manuscript of the Book of Mormon" Detail="https://www.josephsmithpapers.org/the-papers/revelations-and-translations/jsppr3/jsppr3-sub-pm" Tapped="OnLink"/>
+                <TextCell Text="1830 Book of Mormon" Detail="https://www.josephsmithpapers.org/paper-summary/book-of-mormon-1830/1" Tapped="OnLink"/>
+                <TextCell Text="1837 Book of Mormon" Detail="https://www.josephsmithpapers.org/paper-summary/book-of-mormon-1837/1" Tapped="OnLink"/>
+                <TextCell Text="1840 Book of Mormon" Detail="https://www.josephsmithpapers.org/paper-summary/book-of-mormon-1840/1" Tapped="OnLink"/>
+                <TextCell Text="1841 Book of Mormon" Detail="https://www.josephsmithpapers.org/paper-summary/book-of-mormon-1841/1" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="LDS / Brighamite">
+                <TextCell Text="SeekingYHWH" Detail="https://seekingyhwh.org/resources/lds/" Tapped="OnLink"/>
+                <TextCell Text="Scriptures" Detail="https://www.churchofjesuschrist.org/study/scriptures?lang=eng&amp;platform=web" Tapped="OnLink"/>
+                <TextCell Text="Old Testament" Detail="https://www.churchofjesuschrist.org/study/scriptures/ot?lang=eng" Tapped="OnLink"/>
+                <TextCell Text="New Testament" Detail="https://www.churchofjesuschrist.org/study/scriptures/nt?lang=eng" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon" Detail="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants" Detail="https://www.churchofjesuschrist.org/study/scriptures/dc-testament?lang=eng" Tapped="OnLink"/>
+                <TextCell Text="Pearl of Great Price" Detail="https://www.churchofjesuschrist.org/study/scriptures/pgp?lang=eng" Tapped="OnLink"/>
+                <TextCell Text="Joseph Smith Translation Appendix" Detail="https://www.churchofjesuschrist.org/study/scriptures/jst?lang=eng" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Community of Christ">
+                <TextCell Text="Doctrine and Covenants" Detail="https://cofchrist.org/doctrine-and-covenants/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="CenterPlace RLDS">
+                <TextCell Text="Inspired Bible" Detail="http://centerplace.org/hs/iv/" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon 1908" Detail="http://centerplace.org/hs/bm/" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants" Detail="http://centerplace.org/hs/dc/" Tapped="OnLink"/>
+                <TextCell Text="Lectures on Faith" Detail="http://centerplace.org/hs/lf/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Scripture Toolbox">
+                <TextCell Text="Scriptures" Detail="http://www.scripturetoolbox.com/html/scripture.html" Tapped="OnLink"/>
+                <TextCell Text="Bible Inspired Version" Detail="http://www.scripturetoolbox.com/html/iv/index.html" Tapped="OnLink"/>
+                <TextCell Text="Old Testament Inspired Version" Detail="http://www.scripturetoolbox.com/html/iv/index-ot.html" Tapped="OnLink"/>
+                <TextCell Text="New Testament Inspired Version" Detail="http://www.scripturetoolbox.com/html/iv/index-nt.html" Tapped="OnLink"/>
+                <TextCell Text="Bible Comparison" Detail="http://www.scripturetoolbox.com/html/ic/index.html" Tapped="OnLink"/>
+                <TextCell Text="Old Testament Comparison" Detail="http://www.scripturetoolbox.com/html/ic/index-ot.html" Tapped="OnLink"/>
+                <TextCell Text="New Testament Comparison" Detail="http://www.scripturetoolbox.com/html/ic/index-nt.html" Tapped="OnLink"/>
+                <TextCell Text="Bible KJV" Detail="http://www.scripturetoolbox.com/html/kjv/index.html" Tapped="OnLink"/>
+                <TextCell Text="Old Testament KJV" Detail="http://www.scripturetoolbox.com/html/kjv/index-ot.html" Tapped="OnLink"/>
+                <TextCell Text="New Testament KJV" Detail="http://www.scripturetoolbox.com/html/kjv/index-nt.html" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon LDS English" Detail="http://www.scripturetoolbox.com/html/ldsbom_english/index.html" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon LDS Spanish" Detail="http://www.scripturetoolbox.com/html/ldsbom_spanish/index.html" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon 1908 RLDS" Detail="http://www.scripturetoolbox.com/html/1908aebom/index.html" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon RCE" Detail="http://www.scripturetoolbox.com/html/rcebom/index.html" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants LDS" Detail="http://www.scripturetoolbox.com/html/lds_d_c/index.html" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants RLDS" Detail="http://www.scripturetoolbox.com/html/d_c/index.html" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="3Scriptures">
+                <TextCell Text="Scriptures" Detail="https://3scriptures.com/" Tapped="OnLink"/>
+                <TextCell Text="Old Testament Inspired Version" Detail="https://3scriptures.com/OldTst/index.shtml" Tapped="OnLink"/>
+                <TextCell Text="New Testament Inspired Version" Detail="https://3scriptures.com/NewTst/index.shtml" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon RLDS" Detail="https://3scriptures.com/BkMrm/index.shtml" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants RLDS" Detail="https://3scriptures.com/DocCov/index.shtml" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Simply Scriptures">
+                <TextCell Text="Old Testament (Genesis - Ruth)" Detail="https://simplyscriptures.com/display?s=OT1_About" Tapped="OnLink"/>
+                <TextCell Text="Old Testament (1 Samuel - Ecclesiastes)" Detail="https://simplyscriptures.com/display?s=OT2_About" Tapped="OnLink"/>
+                <TextCell Text="Old Testament (Isaiah - Malachi)" Detail="https://simplyscriptures.com/display?s=OT3_About" Tapped="OnLink"/>
+                <TextCell Text="New Testament" Detail="https://simplyscriptures.com/display?s=NT_About" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon" Detail="https://simplyscriptures.com/display?s=BM_About" Tapped="OnLink"/>
+                <TextCell Text="Doctrine &amp; Covenants" Detail="https://simplyscriptures.com/display?s=DC_About" Tapped="OnLink"/>
+                <TextCell Text="Webster's Dictionary 1828" Detail="https://simplyscriptures.com/dictionary" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Restored Gospel">
+                <TextCell Text="Scripture Search" Detail="http://www.restoredgospel.com/Scriptures1/Main_Search.php" Tapped="OnLink"/>
+                <TextCell Text="Multi Scripture Search" Detail="http://www.restoredgospel.com/Scriptures1/Shell_Search_ADV.php" Tapped="OnLink"/>
+                <TextCell Text="List Scripture Search" Detail="http://www.restoredgospel.com/Scriptures1/Shell_ListSearch.php" Tapped="OnLink"/>
+                <TextCell Text="RLDS Classic Search" Detail="http://www.restoredgospel.com/Scriptures1/Shell_Search_Classic.php" Tapped="OnLink"/>
+                <TextCell Text="Bible IV-KJ Comparison" Detail="http://www.restoredgospel.com/Scriptures1/IVKJ_INDEX.php" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon RCE Search" Detail="http://www.restoredgospel.com/Scriptures1/Shell_Search_RCE.php" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon RCE-RLDS 1908 Comparison" Detail="http://www.restoredgospel.com/Scriptures1/Shell_Search_RCE_1908_Comparison.PHP" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon RCE-RLDS 1908 Changes" Detail="http://www.restoredgospel.com/Scriptures1/Shell_CompareBOMMajorChanges.php" Tapped="OnLink"/>
+                <TextCell Text="Libro de Mormón 1908 RLDS Español Búsqueda" Detail="http://www.restoredgospel.com/Scriptures1/Shell_Search_Spanish.php" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon Hebrew English" Detail="http://www.restoredgospel.com/Hebrew/Shell_Display_HebrewEnglish.php" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Restoration Books Collection">
+                <TextCell Text="The Book of Mormon - Dual Versified Edition" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+                <TextCell Text="The Book of Mormon - CoC / RLDS 1908" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+                <TextCell Text="Bible: Inspired Version" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+                <TextCell Text="Daisy Digital Talking Books" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+                <TextCell Text="The Book of Mormon - Braille" Detail="http://www.gkearney.org/books/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Book of Mormon Foundation">
+                <TextCell Text="Book of Mormon RCE Changes" Detail="https://www.bomf.org/restored-covenant-edition.html" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="LDS D&amp;C Compare">
+                <TextCell Text="LDS D&amp;C Compare" Detail="https://comparedandc.com/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="lecturesonfaith.com">
+                <TextCell Text="Lectures on Faith" Detail="https://lecturesonfaith.com/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="BibleHub">
+                <TextCell Text="BibleHub" Detail="https://biblehub.com/" Tapped="OnLink"/>
+                <TextCell Text="Commentaries" Detail="https://biblehub.com/commentaries/" Tapped="OnLink"/>
+                <TextCell Text="Adam Clarke's Commentary" Detail="https://biblehub.com/commentaries/clarke/" Tapped="OnLink"/>
+                <TextCell Text="Concordances" Detail="https://biblehub.com/concordance/" Tapped="OnLink"/>
+                <TextCell Text="Strong's Concordance" Detail="https://biblehub.com/strongs.htm" Tapped="OnLink"/>
+                <TextCell Text="Greek Concordances" Detail="https://biblehub.com/greek/" Tapped="OnLink"/>
+                <TextCell Text="Hebrew Concordances" Detail="https://biblehub.com/hebrew/" Tapped="OnLink"/>
+                <TextCell Text="Dictionary" Detail="https://biblehub.com/dictionary/" Tapped="OnLink"/>
+                <TextCell Text="Encyclopedia" Detail="https://biblehub.com/encyclopedia/" Tapped="OnLink"/>
+                <TextCell Text="Interlinear" Detail="https://biblehub.com/interlinear/" Tapped="OnLink"/>
+                <TextCell Text="Weights and Measures" Detail="https://biblehub.com/weights-and-measures/" Tapped="OnLink"/>
+                <TextCell Text="Timeline" Detail="https://biblehub.com/timeline/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Open Bible">
+                <TextCell Text="Open Bible" Detail="https://openbible.com/" Tapped="OnLink"/>
+                <TextCell Text="Downloads" Detail="https://openbible.com/downloads.htm" Tapped="OnLink"/>
+                <TextCell Text="Berean Study Bible" Detail="https://openbible.com/bsb/genesis/1.htm" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Berean Standard Bible">
+                <TextCell Text="Berean Standard Bible" Detail="https://berean.bible/" Tapped="OnLink"/>
+                <TextCell Text="Downloads" Detail="https://berean.bible/downloads.htm" Tapped="OnLink"/>
+                <TextCell Text="Shop" Detail="https://bereanbibles.com/shop/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Hebrew Gospels">
+                <TextCell Text="Engilsh" Detail="https://www.hebrewgospels.com/" Tapped="OnLink"/>
+                <TextCell Text="Español" Detail="https://www.hebrewgospels.com/espa%C3%B1ol" Tapped="OnLink"/>
+                <TextCell Text="Français" Detail="https://www.hebrewgospels.com/fran%C3%A7ais" Tapped="OnLink"/>
+                <TextCell Text="Srpski" Detail="https://www.hebrewgospels.com/srpski" Tapped="OnLink"/>
+                <TextCell Text="Magyarország" Detail="https://www.hebrewgospels.com/magyar" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="The Book of Mormon: The Earliest Text">
+                <TextCell Text="Book of Mormon Central" Detail="https://bookofmormoncentral.org/content/book-mormon-earliest-text" Tapped="OnLink"/>
+                <TextCell Text="Amazon" Detail="https://www.amazon.com/Book-Mormon-Earliest-Text/dp/0300263376/" Tapped="OnLink"/>
+                <TextCell Text="Yale University Press" Detail="https://yalebooks.yale.edu/book/9780300142181/book-mormon/" Tapped="OnLink"/>
+                <TextCell Text="Barnes &amp; Noble" Detail="https://www.barnesandnoble.com/w/the-book-of-mormon-joseph-smith/1126581860" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Book of Mormon - Voices From the Dust">
+                <TextCell Text="Voices From The Dust: Volume 1" Detail="https://www.amazon.com/gp/product/B07G5H46MF/" Tapped="OnLink"/>
+                <TextCell Text="Voices From The Dust: Volume 2" Detail="https://www.amazon.com/gp/product/B07G5KKZY8/" Tapped="OnLink"/>
+                <TextCell Text="Voices From The Dust: Volume 3" Detail="https://www.amazon.com/gp/product/B07G5JJZCH/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Analysis of Textual Variants of the Book of Mormon - interpreterfoundation.org">
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 1: 1 Nephi – 2 Nephi 10" Detail="http://interpreterfoundation.org/books/atv/p1/" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 2: 2 Nephi 11 – Mosiah 16" Detail="http://interpreterfoundation.org/books/atv/p2/" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 3: Mosiah 17 – Alma 20" Detail="http://interpreterfoundation.org/books/atv/p3/" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 4: Alma 21 – 55" Detail="http://interpreterfoundation.org/books/atv/p4/" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 5: Alma 56 – 3 Nephi 18" Detail="http://interpreterfoundation.org/books/atv/p5/" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 6: 3 Nephi 19 – Moroni 10" Detail="http://interpreterfoundation.org/books/atv/p6/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Analysis of Textual Variants of the Book of Mormon - Amazon">
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 1: 1 Nephi – 2 Nephi 10" Detail="https://www.amazon.com/ANALYSIS-TEXTUAL-VARIANTS-BOOK-MORMON/dp/B000OZI2O2" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 2: 2 Nephi 11 – Mosiah 16" Detail="https://www.amazon.com/Analysis-Textual-Variants-Mormon-Critical/dp/093489308X" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 3: Mosiah 17 – Alma 20" Detail="https://www.amazon.com/Analysis-Textual-Variants-Book-Mormon/dp/093489311X" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 4: Alma 21 – 55" Detail="https://www.amazon.com/Analysis-Textual-Variants-Book-Mormon/dp/0934893128" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 5: Alma 56 – 3 Nephi 18" Detail="https://www.amazon.com/Analysis-Textual-Variants-Book-Mormon/dp/0934893136" Tapped="OnLink"/>
+                <TextCell Text="Analysis of Textual Variants of the Book of Mormon, Part 6: 3 Nephi 19 – Moroni 10" Detail="https://www.amazon.com/Analysis-Textual-Variants-Book-Mormon/dp/0934893780" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Wikisource">
+                <TextCell Text="Book of Mormon editions" Detail="https://en.wikisource.org/wiki/Book_of_Mormon" Tapped="OnLink"/>
+                <TextCell Text="1830 Book of Mormon" Detail="https://en.wikisource.org/wiki/Book_of_Mormon_(1830)" Tapped="OnLink"/>
+                <TextCell Text="1840 Book of Mormon" Detail="https://en.wikisource.org/w/index.php?title=Book_of_Mormon_(1840)" Tapped="OnLink"/>
+                <TextCell Text="Deseret alphabet edition" Detail="https://en.wikisource.org/w/index.php?title=%F0%90%90%9C_%F0%90%90%92%F0%90%90%B3%F0%90%90%BF_%F0%90%90%B1%F0%90%91%82_%F0%90%90%A3%F0%90%90%AB%F0%90%91%89%F0%90%91%8B%F0%90%90%B2%F0%90%91%8C&amp;action=edit&amp;redlink=1" Tapped="OnLink"/>
+                <TextCell Text="1981 LDS / Brighamite edition" Detail="https://en.wikisource.org/wiki/Book_of_Mormon_(1981)" Tapped="OnLink"/>
+                <TextCell Text="Adapted into plain English by Timothy B Wilson 1993" Detail="https://en.wikisource.org/wiki/Book_of_Mormon_(Plain_English_Version)" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Book of Mormon Online (slow)">
+                <TextCell Text="List of Book of Mormons" Detail="https://bookofmormon.online/fax" Tapped="OnLink"/>
+                <TextCell Text="1829 Printer's Manuscript" Detail="https://bookofmormon.online/fax/printer" Tapped="OnLink"/>
+                <TextCell Text="1830 Palmyra Edition" Detail="https://bookofmormon.online/fax/1830" Tapped="OnLink"/>
+                <TextCell Text="1837 Kirtland Edition" Detail="https://bookofmormon.online/fax/1837" Tapped="OnLink"/>
+                <TextCell Text="1840 Nauvoo Edition" Detail="https://bookofmormon.online/fax/1840" Tapped="OnLink"/>
+                <TextCell Text="1841 Liverpool Edition" Detail="https://bookofmormon.online/fax/1841" Tapped="OnLink"/>
+                <TextCell Text="1849 Liverpool Edition" Detail="https://bookofmormon.online/fax/1849" Tapped="OnLink"/>
+                <TextCell Text="1852 Liverpool Edition" Detail="https://bookofmormon.online/fax/1852" Tapped="OnLink"/>
+                <TextCell Text="1854 Liverpool Edition" Detail="https://bookofmormon.online/fax/1854" Tapped="OnLink"/>
+                <TextCell Text="1858 New York Edition" Detail="https://bookofmormon.online/fax/1858" Tapped="OnLink"/>
+                <TextCell Text="1871 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1871" Tapped="OnLink"/>
+                <TextCell Text="1874 Iowa Edition" Detail="https://bookofmormon.online/fax/1874i" Tapped="OnLink"/>
+                <TextCell Text="1874 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1874" Tapped="OnLink"/>
+                <TextCell Text="1877 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1877" Tapped="OnLink"/>
+                <TextCell Text="1879 Liverpool Edition" Detail="https://bookofmormon.online/fax/1879" Tapped="OnLink"/>
+                <TextCell Text="1881 Liverpool Edition" Detail="https://bookofmormon.online/fax/1881" Tapped="OnLink"/>
+                <TextCell Text="1883 Liverpool Edition" Detail="https://bookofmormon.online/fax/1883" Tapped="OnLink"/>
+                <TextCell Text="1885 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1885" Tapped="OnLink"/>
+                <TextCell Text="1898 Liverpool Edition" Detail="https://bookofmormon.online/fax/1898" Tapped="OnLink"/>
+                <TextCell Text="1899 Nephite Records" Detail="https://bookofmormon.online/fax/1899" Tapped="OnLink"/>
+                <TextCell Text="1900 Iowa Edition" Detail="https://bookofmormon.online/fax/1900" Tapped="OnLink"/>
+                <TextCell Text="1902 Kansas City Edition" Detail="https://bookofmormon.online/fax/1902" Tapped="OnLink"/>
+                <TextCell Text="1904 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1904" Tapped="OnLink"/>
+                <TextCell Text="1907 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1907" Tapped="OnLink"/>
+                <TextCell Text="1908 Chicago Edition" Detail="https://bookofmormon.online/fax/1908c" Tapped="OnLink"/>
+                <TextCell Text="1908 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1908" Tapped="OnLink"/>
+                <TextCell Text="1910 Chicago Edition" Detail="https://bookofmormon.online/fax/1910" Tapped="OnLink"/>
+                <TextCell Text="1911 Chicago Edition" Detail="https://bookofmormon.online/fax/1911" Tapped="OnLink"/>
+                <TextCell Text="1917 Iowa Edition" Detail="https://bookofmormon.online/fax/1917" Tapped="OnLink"/>
+                <TextCell Text="1918 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1918" Tapped="OnLink"/>
+                <TextCell Text="1920 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1920" Tapped="OnLink"/>
+                <TextCell Text="1921 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1921" Tapped="OnLink"/>
+                <TextCell Text="1981 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/1981" Tapped="OnLink"/>
+                <TextCell Text="2013 Salt Lake City Edition" Detail="https://bookofmormon.online/fax/2013" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Snufferites">
+                <TextCell Text="Denver Snuffer" Detail="https://seekingyhwh.org/resources/denver-snuffer/" Tapped="OnLink"/>
+                <TextCell Text="Denver Snuffer’s Alma 34:34 change" Detail="https://seekingyhwh.org/2017/05/20/denver-snuffers-alma-3434-change/" Tapped="OnLink"/>
+                <TextCell Text="James Scott Trimm and The Stick of Joseph" Detail="https://seekingyhwh.org/2020/06/01/james-scott-trimm-and-the-stick-of-joseph/" Tapped="OnLink"/>
+                <TextCell Text="The Old Covenants: New Translation" Detail="https://scriptures.info/scriptures/oc" Tapped="OnLink"/>
+                <TextCell Text="The New Covenants: New Translation" Detail="https://scriptures.info/scriptures/nc" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon" Detail="https://scriptures.info/scriptures/nc" Tapped="OnLink"/>
+                <TextCell Text="Teaching &amp; Commandments [D&amp;D]" Detail="https://scriptures.info/scriptures/tc" Tapped="OnLink"/>
+                <TextCell Text="The Stick of Joseph [BoM]" Detail="https://stickofjoseph.org/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Webster's 1828 Dictionary">
+                <TextCell Text="Webster's 1828 Dictionary" Detail="https://webstersdictionary1828.com/" Tapped="OnLink"/>
+                <TextCell Text="American Dictionary of the English Language 1828 Facsimile Edition" Detail="https://www.amazon.com/American-Dictionary-English-Language-Facsimile/dp/091249803X/" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Wikipedia">
+                <TextCell Text="Joseph Smith Translation of the Bible" Detail="https://en.wikipedia.org/wiki/Joseph_Smith_Translation_of_the_Bible" Tapped="OnLink"/>
+                <TextCell Text="Book of Mormon" Detail="https://en.wikipedia.org/wiki/Book_of_Mormon" Tapped="OnLink"/>
+                <TextCell Text="Doctrine and Covenants Sections" Detail="https://en.wikipedia.org/wiki/Doctrine_and_Covenants" Tapped="OnLink"/>
+                <TextCell Text="Lectures on Faith" Detail="https://en.wikipedia.org/wiki/Lectures_on_Faith" Tapped="OnLink"/>
+            </TableSection>
+            <TableSection Title="Calendar">
+                <TextCell Text="Resources related to the LuniSolar Calendar" Detail="https://seekingyhwh.org/resources/calendar/" Tapped="OnLink"/>
+                <TextCell Text="Calendar Changes" Detail="https://seekingyhwh.org/resources/calendar-changes/" Tapped="OnLink"/>
+                <TextCell Text="SeekingYHWH LuniSolar Calendar" Detail="https://play.google.com/store/apps/details?id=org.seekingyhwh.calendar" Tapped="OnLink"/>
+                <TextCell Text="Lunar Sabbath YouTube playlist" Detail="https://www.youtube.com/playlist?list=PLq6UHU56ks7swXWe1_ZOSaVGFrnaBT8V3" Tapped="OnLink"/>
+                <TextCell Text="Sabbath" Detail="https://seekingyhwh.org/resources/sabbath/" Tapped="OnLink"/>
+                <TextCell Text="Sabbaths" Detail="https://seekingyhwh.org/resources/sabbaths/" Tapped="OnLink"/>
+                <TextCell Text="Morning" Detail="https://seekingyhwh.org/resources/morning/" Tapped="OnLink"/>
+                <TextCell Text="Night Watches" Detail="https://seekingyhwh.org/resources/night-watches/" Tapped="OnLink"/>
+                <TextCell Text="New Moon" Detail="https://seekingyhwh.org/resources/new-moon/" Tapped="OnLink"/>
+                <TextCell Text="New Year" Detail="https://seekingyhwh.org/resources/new-year/" Tapped="OnLink"/>
+                <TextCell Text="13th Moon" Detail="https://seekingyhwh.org/resources/13th-moon/" Tapped="OnLink"/>
+                <TextCell Text="International Date Line" Detail="https://seekingyhwh.org/resources/international-date-line/" Tapped="OnLink"/>
+                <TextCell Text="Inclusive Time" Detail="https://seekingyhwh.org/resources/inclusive-time/" Tapped="OnLink"/>
+                <TextCell Text="Lunar Cycle Change" Detail="https://seekingyhwh.org/resources/lunar-cycle-change/" Tapped="OnLink"/>
+                <TextCell Text="Lunar Sabbath Believers Facebook Group" Detail="https://www.facebook.com/groups/lunarsabbathbelievers/" Tapped="OnLink"/>
+                <TextCell Text="High Holidays" Detail="https://seekingyhwh.org/resources/high-holidays/" Tapped="OnLink"/>
+                <TextCell Text="Pagan Holidays" Detail="https://seekingyhwh.org/resources/pagan-holidays/" Tapped="OnLink"/>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

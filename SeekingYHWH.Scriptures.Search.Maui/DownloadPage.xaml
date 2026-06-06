@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.DownloadPage">
+    <Grid
+        RowDefinitions="Auto,Auto,*">
+        <Picker Title="Language" SelectedIndexChanged="LanguagesChanged" Grid.Row="0" x:Name="languagesPicker"/>
+        <AbsoluteLayout Grid.Row="1">
+            <Button Text="Remove Books List" IsEnabled="False" Clicked="BooksRemove" AbsoluteLayout.LayoutBounds="0,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" x:Name="booksRemove"/>
+            <Button Text="Refresh Books List" IsEnabled="False" Clicked="BooksDownload" AbsoluteLayout.LayoutBounds="0.5,0.5" AbsoluteLayout.LayoutFlags="PositionProportional" x:Name="booksRefresh"/>
+            <Button Text="Refresh Languages" Clicked="LanguagesDownload" AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        </AbsoluteLayout>
+        <ListView SelectionMode="None" Grid.Row="2" x:Name="booksList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <AbsoluteLayout>
+                            <Label Text="{Binding Name}" FontSize="14" AbsoluteLayout.LayoutBounds="0,0.5" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                            <HorizontalStackLayout AbsoluteLayout.LayoutBounds="1,0.5" AbsoluteLayout.LayoutFlags="PositionProportional">
+                                <Button Text="{Binding Download}" Clicked="BookDownload" Grid.Column="1"/>
+                                <Button Text="Remove" IsEnabled="{Binding Downloaded}" Clicked="BookRemove" Grid.Column="2"/>
+                            </HorizontalStackLayout>
+                        </AbsoluteLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
