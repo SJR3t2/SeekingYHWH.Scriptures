@@ -23,6 +23,14 @@ internal static class  Program
 	private static TimeSpan wait = TimeSpan.FromSeconds(3);
 	private static bool tsvDelete = true;
 
+	private static readonly string[] ot = new string[]
+	{
+		"GEN", "EXO", "LEV", "NUM", "DEU", "JOS", "JDG", "RUT",
+		"1SA", "2SA", "1KI", "2KI", "1CH", "2CH", "EZR", "NEH",
+		"JOB", "PSA", "PRO", "ECC", "ISA", "JER", "LAM", "EZK",
+		"DAN", "HOS", "JOL", "AMO", "OBA", "JON", "MIC", "NAM",
+		"HAB", "ZEP", "HAG", "ZEC", "MAL",
+	};
 	private static readonly string[] nt = new string[]
 	{
 		"MAT", "MRK", "LUK", "JHN", "ACT", "ROM", "1CO", "2CO",
