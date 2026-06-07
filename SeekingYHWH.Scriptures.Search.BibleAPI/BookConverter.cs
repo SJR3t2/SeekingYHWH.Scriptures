@@ -85,14 +85,6 @@ internal static class BookConverter
 			var value = new ChapterInfo();
 			ChapterInfoConverter.Parse(value, stream, ref reader);
 			values.Add(value);
-			if (!stream.Read(ref reader))
-			{
-				throw new EndOfStreamException();
-			}
-			if (reader.TokenType != JsonTokenType.EndObject)
-			{
-				throw new FormatException();
-			}
 		}
 	}
 }
