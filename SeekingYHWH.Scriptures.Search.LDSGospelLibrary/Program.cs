@@ -45,6 +45,7 @@ internal static class Program
 	private static bool xzDelete = true;
 	private static bool sqlDelete = true;
 	private static bool tsvDelete = true;
+	private static bool chapters = true;
 
 	private static readonly Dictionary<string, BookInfo> urisBooks = new Dictionary<string, BookInfo>()
 	{
@@ -424,7 +425,16 @@ internal static class Program
 						continue;
 					}
 					var value = new NavigationInfo();
-					value.Title = WebUtility.HtmlDecode(reader.GetString(titleOrdinal));
+					var valueTitle = WebUtility.HtmlDecode(reader.GetString(titleOrdinal));
+					if (chapters &&
+						!char.IsDigit(valueTitle[valueTitle.Length -1]) &&
+						char.IsDigit(uri[uri.Length - 1]))
+					{
+						var i = uri.LastIndexOf('/');
+						var chapter = uri.Substring(i + 1);
+						valueTitle += " " + chapter;
+					}
+					value.Title = valueTitle;
 					value.HTML = WebUtility.HtmlDecode(reader.GetString(htmlOrdinal));
 					navigations.Add(value);
 				}
