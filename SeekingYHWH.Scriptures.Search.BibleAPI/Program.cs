@@ -20,7 +20,7 @@ internal static class  Program
 	}
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
-	private static TimeSpan wait = TimeSpan.FromSeconds(5);
+	private static TimeSpan wait = TimeSpan.FromSeconds(2);
 	private static bool tsvDelete = true;
 
 	private static readonly LanguageInfo[] languages = new LanguageInfo[]
