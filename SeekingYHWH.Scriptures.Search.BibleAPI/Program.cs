@@ -45,6 +45,7 @@ internal static class  Program
 	private static HttpClient client;
 	private static readonly byte[] buffer = new byte[4096];
 	private static readonly List<ChapterInfo> chapters = new List<ChapterInfo>();
+	private static readonly List<VerseInfo> verses = new List<VerseInfo>();
 
 	private static void Prepare()
 	{
@@ -162,10 +163,19 @@ internal static class  Program
 
 	private static void ProcessChapter(StreamWriter writer, ChapterInfo chapter)
 	{
+		verses.Clear();
+
 		var url = chapter.URL;
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
-			//TODO: Verses
+			ChapterConverter.Parse(verses, reader, buffer);
+		}
+
+		//TODO: Write Book Chapter
+
+		foreach (var verse in verses)
+		{
+			//TODO: Write Verse
 		}
 	}
 }
