@@ -323,6 +323,11 @@ internal static class Program
 		{
 			writer.Write(catalog.Version);
 		}
+
+		if (xzDelete && sqlDelete && tsvDelete)
+		{
+			Directory.Delete(languageCode, true);
+		}
 	}
 
 	private static void ProcessBook(BookInfo book)
