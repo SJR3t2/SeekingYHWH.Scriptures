@@ -10,7 +10,7 @@ namespace SeekingYHWH.Scriptures.Search.BibleAPI;
 
 internal static class ChapterInfoConverter
 {
-	private static readonly byte[] urlVersion = Encoding.UTF8.GetBytes("url");
+	private static readonly byte[] urlProperty = Encoding.UTF8.GetBytes("url");
 
 	public static void Parse(ChapterInfo value, UTF8JSONReaderStream stream, ref Utf8JsonReader reader)
 	{
@@ -28,7 +28,7 @@ internal static class ChapterInfoConverter
 			{
 				throw new FormatException();
 			}
-			if (reader.ValueTextEquals(urlVersion))
+			if (reader.ValueTextEquals(urlProperty))
 			{
 				if (!stream.Read(ref reader))
 				{
