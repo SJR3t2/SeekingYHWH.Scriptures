@@ -9,7 +9,7 @@ internal static class  Program
 {
 	private const string schema = "https";
 	private const string host = "bible-api.com";
-	private const string bookURL = "/data/{0}/{1}";
+	private const string bookURL = schema + "://" + host + "/data/{0}/{1}";
 
 	private const char separator = '\t';
 
