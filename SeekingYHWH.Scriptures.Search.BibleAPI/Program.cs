@@ -1,5 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.IO;
+using System.IO.Compression;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace SeekingYHWH.Scriptures.Search.BibleAPI;
 
@@ -18,7 +20,8 @@ internal static class  Program
 	}
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
-	private static TimeSpan wait = TimeSpan.FromSeconds(15);
+	private static TimeSpan wait = TimeSpan.FromSeconds(5);
+	private static bool tsvDelete = true;
 
 	private static readonly LanguageInfo[] languages = new LanguageInfo[]
 	{
@@ -100,13 +103,24 @@ internal static class  Program
 
 	private static void ProcessLanguage(LanguageInfo language)
 	{
+		var languageCode = language.Code;
+		var languagePath = Path.Combine(scripturesPath, languageCode);
 		try
 		{
-			Directory.CreateDirectory(language.Code);
+			Directory.CreateDirectory(languagePath);
 		}
 		catch (Exception exception)
 		{
-			Console.Error.WriteLine("Can't create {0} {1}", language.Code, exception.Message);
+			Console.Error.WriteLine("Can't create {0} {1}", languagePath, exception.Message);
+			return;
+		}
+		try
+		{
+			Directory.CreateDirectory(languageCode);
+		}
+		catch (Exception exception)
+		{
+			Console.Error.WriteLine("Can't create {0} {1}", languageCode, exception.Message);
 			return;
 		}
 
@@ -115,19 +129,25 @@ internal static class  Program
 			ProcessCollection(language, collection);
 		}
 
-		try
+		if (tsvDelete)
 		{
-			Directory.Delete(language.Code, true);
-		}
-		catch (Exception exception)
-		{
-			Console.Error.WriteLine("Can't delete {0} {1}", language.Code, exception.Message);
+			try
+			{
+				Directory.Delete(languageCode, true);
+			}
+			catch (Exception exception)
+			{
+				Console.Error.WriteLine("Can't delete {0} {1}", languageCode, exception.Message);
+			}
 		}
 	}
 
 	private static void ProcessCollection(LanguageInfo language, CollectionInfo collection)
 	{
-		var tsvPath = Path.Combine(language.Code, collection.Code + ".tsv");
+		var languageCode = language.Code;
+		var bookCode = collection.Code;
+
+		var tsvPath = Path.Combine(languageCode, bookCode + ".tsv");
 		var books = collection.Books;
 		using (var writerStream = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
 		using (var writer = new StreamWriter(writerStream))
@@ -135,6 +155,43 @@ internal static class  Program
 			foreach (var book in books)
 			{
 				ProcessBook(writer, collection, book, chapters);
+			}
+		}
+
+		byte[] hash;
+		using (var hasher = SHA256.Create())
+		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+		{
+			hash = hasher.ComputeHash(reader);
+		}
+
+		var languagePath = Path.Combine(scripturesPath, languageCode);
+
+		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
+		using (var writer = new FileStream(hashPath, FileMode.Create, FileAccess.Write, FileShare.Read))
+		{
+			writer.Write(hash, 0, hash.Length);
+		}
+
+		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
+		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
+		using (var writer = new BrotliStream(writerStream, CompressionLevel.SmallestSize))
+		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+		{
+			reader.CopyTo(writer);
+		}
+
+		Books.Update(languagePath, new[] { collection });
+
+		if (tsvDelete)
+		{
+			try
+			{
+				File.Delete(tsvPath);
+			}
+			catch (Exception exception)
+			{
+				Console.Error.WriteLine("Can't delete {0} {1}", tsvPath, exception.Message);
 			}
 		}
 	}
