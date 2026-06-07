@@ -56,6 +56,30 @@ internal static class  Program
 				},
 			},
 		},
+		new LanguageInfo()
+		{
+			Code = "eng",
+			Name = "English",
+			Collections = new CollectionInfo[]
+			{
+				new CollectionInfo()
+				{
+					Code = "OT-WEB",
+					Name = "Old Testament - WEB",
+					Pre = "WEB",
+					Id = "web",
+					Books = ot,
+				},
+				new CollectionInfo()
+				{
+					Code = "NT-WEB",
+					Name = "New Testament - WEB",
+					Pre = "WEB",
+					Id = "web",
+					Books = nt,
+				},
+			},
+		}
 	};
 	private static HttpClient client;
 	private static readonly byte[] buffer = new byte[32 * 1024];
