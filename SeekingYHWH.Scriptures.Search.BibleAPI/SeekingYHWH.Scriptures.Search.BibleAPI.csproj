@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.Manage\SeekingYHWH.Scriptures.Search.Manage.csproj" />
     <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
   </ItemGroup>
 
