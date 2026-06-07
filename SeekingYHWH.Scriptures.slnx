@@ -18,6 +18,7 @@
   <Project Path="SeekingYHWH.Scriptures.Querys.UnitTests/SeekingYHWH.Scriptures.Querys.UnitTests.csproj" />
   <Project Path="SeekingYHWH.Scriptures.Querys.XML/SeekingYHWH.Scriptures.Querys.XML.csproj" />
   <Project Path="SeekingYHWH.Scriptures.Querys/SeekingYHWH.Scriptures.Querys.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Search.BibleAPI/SeekingYHWH.Scriptures.Search.BibleAPI.csproj" Id="8f7ac500-b778-4da2-b70c-fd8ecc857717" />
   <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
   <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
   <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
