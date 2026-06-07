@@ -20,9 +20,16 @@ internal static class  Program
 	}
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
-	private static TimeSpan wait = TimeSpan.FromSeconds(2);
+	private static TimeSpan wait = TimeSpan.FromSeconds(3);
 	private static bool tsvDelete = true;
 
+	private static readonly string[] nt = new string[]
+	{
+		"MAT", "MRK", "LUK", "JHN", "ACT", "ROM", "1CO", "2CO",
+		"GAL", "EPH", "PHP", "COL", "1TH", "2TH", "1TI", "2TH",
+		"1TI", "2TI", "TIT", "PHM", "HEB", "JAS", "1PE", "2PE",
+		"1JN", "2JN", "3JN", "JUD", "REV",
+	};
 	private static readonly LanguageInfo[] languages = new LanguageInfo[]
 	{
 		new LanguageInfo()
@@ -37,19 +44,13 @@ internal static class  Program
 					Name = "Cherokee New Testament",
 					Pre = "CNT",
 					Id = "cherokee",
-					Books = new string[]
-					{
-						"MAT", "MRK", "LUK", "JHN", "ACT", "ROM", "1CO", "2CO",
-						"GAL", "EPH", "PHP", "COL", "1TH", "2TH", "1TI", "2TH",
-						"1TI", "2TI", "TIT", "PHM",	"HEB", "JAS", "1PE", "2PE",
-						"1JN", "2JN", "3JN", "JUD", "REV",
-					},
+					Books = nt,
 				},
 			},
 		},
 	};
 	private static HttpClient client;
-	private static readonly byte[] buffer = new byte[4096];
+	private static readonly byte[] buffer = new byte[32 * 1024];
 	private static readonly List<ChapterInfo> chapters = new List<ChapterInfo>();
 	private static readonly List<VerseInfo> verses = new List<VerseInfo>();
 
