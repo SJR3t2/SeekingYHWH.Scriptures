@@ -10,7 +10,7 @@ namespace SeekingYHWH.Scriptures.Search.BibleAPI;
 
 internal static class BookConverter
 {
-	private static readonly byte[] chaptersProperty = Encoding.UTF8.GetBytes("url");
+	private static readonly byte[] chaptersProperty = Encoding.UTF8.GetBytes("chapters");
 
 	public static void Parse(List<ChapterInfo> values, Stream streamStream, byte[] buffer)
 	{
