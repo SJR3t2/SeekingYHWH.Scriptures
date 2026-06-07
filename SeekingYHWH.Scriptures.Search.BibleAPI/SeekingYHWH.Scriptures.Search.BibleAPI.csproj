@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Innovoft.Text.JSON" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SeekingYHWH.Scriptures.Search.Manage\SeekingYHWH.Scriptures.Search.Manage.csproj" />
     <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
   </ItemGroup>
