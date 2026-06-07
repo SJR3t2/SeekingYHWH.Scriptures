@@ -23,7 +23,7 @@ internal static class  Program
 	private static TimeSpan wait = TimeSpan.FromSeconds(3);
 	private static bool tsvDelete = true;
 
-	private static readonly string[] ot = new string[]
+	private static readonly string[] ot = new string[] //Missing Ester and Songs of Solomon on purpose
 	{
 		"GEN", "EXO", "LEV", "NUM", "DEU", "JOS", "JDG", "RUT",
 		"1SA", "2SA", "1KI", "2KI", "1CH", "2CH", "EZR", "NEH",
