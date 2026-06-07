@@ -1,43 +1,52 @@
 <Solution>
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV/SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV/SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UI/SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UnitTests/SeekingYHWH.Scriptures.ConvertPassages.UnitTests.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class/SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer/SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer.csproj" Id="e5a6a5d5-fa65-4b5f-85ea-037862101e54" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup/SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup.vdproj" Type="Installer">
-    <Build />
-  </Project>
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF/SeekingYHWH.Scriptures.ConvertPassages.WPF.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.ConvertPassages/SeekingYHWH.Scriptures.ConvertPassages.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors/SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures/SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys.LISP.UnitTests/SeekingYHWH.Scriptures.Querys.LISP.UnitTests.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys.LISP/SeekingYHWH.Scriptures.Querys.LISP.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys.Parsers/SeekingYHWH.Scriptures.Querys.Parsers.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys.UnitTests/SeekingYHWH.Scriptures.Querys.UnitTests.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys.XML/SeekingYHWH.Scriptures.Querys.XML.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Querys/SeekingYHWH.Scriptures.Querys.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.BibleAPI/SeekingYHWH.Scriptures.Search.BibleAPI.csproj" Id="8f7ac500-b778-4da2-b70c-fd8ecc857717" />
-  <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.CenterPlace/SeekingYHWH.Scriptures.Search.CenterPlace.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.Console/SeekingYHWH.Scriptures.Search.Console.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.LDSGospelLibrary/SeekingYHWH.Scriptures.Search.LDSGospelLibrary.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.Manage/SeekingYHWH.Scriptures.Search.Manage.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.Maui/SeekingYHWH.Scriptures.Search.Maui.csproj">
-    <Deploy />
-  </Project>
-  <Project Path="SeekingYHWH.Scriptures.Search.Online/SeekingYHWH.Scriptures.Search.Online.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.OpenBible/SeekingYHWH.Scriptures.Search.OpenBible.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.ToolBox/SeekingYHWH.Scriptures.Search.ToolBox.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.UIs/SeekingYHWH.Scriptures.Search.UIs.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search.WPF.Installer/SeekingYHWH.Scriptures.Search.WPF.Installer.csproj" Id="81e25670-3870-4e3e-86eb-861e433cc640" />
-  <Project Path="SeekingYHWH.Scriptures.Search.WPF.Setup/SeekingYHWH.Scriptures.Search.WPF.Setup.vdproj" Type="Installer">
-    <Build />
-  </Project>
-  <Project Path="SeekingYHWH.Scriptures.Search.WPF/SeekingYHWH.Scriptures.Search.WPF.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Search/SeekingYHWH.Scriptures.Search.csproj" />
-  <Project Path="SeekingYHWH.Scriptures.Searchings/SeekingYHWH.Scriptures.Searchings.csproj" />
+  <Folder Name="/ConvertPassages/">
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV/SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV/SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UI/SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UnitTests/SeekingYHWH.Scriptures.ConvertPassages.UnitTests.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class/SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer/SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer.csproj" Id="e5a6a5d5-fa65-4b5f-85ea-037862101e54" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup/SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup.vdproj" Type="Installer">
+      <Build />
+    </Project>
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF/SeekingYHWH.Scriptures.ConvertPassages.WPF.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.ConvertPassages/SeekingYHWH.Scriptures.ConvertPassages.csproj" />
+  </Folder>
+  <Folder Name="/Search/" />
+  <Folder Name="/Search/Downloaders/">
+    <Project Path="SeekingYHWH.Scriptures.Search.BibleAPI/SeekingYHWH.Scriptures.Search.BibleAPI.csproj" Id="8f7ac500-b778-4da2-b70c-fd8ecc857717" />
+    <Project Path="SeekingYHWH.Scriptures.Search.CenterPlace/SeekingYHWH.Scriptures.Search.CenterPlace.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.LDSGospelLibrary/SeekingYHWH.Scriptures.Search.LDSGospelLibrary.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.OpenBible/SeekingYHWH.Scriptures.Search.OpenBible.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.ToolBox/SeekingYHWH.Scriptures.Search.ToolBox.csproj" />
+  </Folder>
+  <Folder Name="/Search/Libraries/">
+    <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors/SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures/SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys.LISP.UnitTests/SeekingYHWH.Scriptures.Querys.LISP.UnitTests.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys.LISP/SeekingYHWH.Scriptures.Querys.LISP.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys.Parsers/SeekingYHWH.Scriptures.Querys.Parsers.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys.UnitTests/SeekingYHWH.Scriptures.Querys.UnitTests.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys.XML/SeekingYHWH.Scriptures.Querys.XML.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Querys/SeekingYHWH.Scriptures.Querys.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Manage/SeekingYHWH.Scriptures.Search.Manage.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Online/SeekingYHWH.Scriptures.Search.Online.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.UIs/SeekingYHWH.Scriptures.Search.UIs.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search/SeekingYHWH.Scriptures.Search.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Searchings/SeekingYHWH.Scriptures.Searchings.csproj" />
+  </Folder>
+  <Folder Name="/Search/Programs/">
+    <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Console/SeekingYHWH.Scriptures.Search.Console.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Maui/SeekingYHWH.Scriptures.Search.Maui.csproj">
+      <Deploy />
+    </Project>
+    <Project Path="SeekingYHWH.Scriptures.Search.WPF.Installer/SeekingYHWH.Scriptures.Search.WPF.Installer.csproj" Id="81e25670-3870-4e3e-86eb-861e433cc640" />
+    <Project Path="SeekingYHWH.Scriptures.Search.WPF.Setup/SeekingYHWH.Scriptures.Search.WPF.Setup.vdproj" Type="Installer">
+      <Build />
+    </Project>
+    <Project Path="SeekingYHWH.Scriptures.Search.WPF/SeekingYHWH.Scriptures.Search.WPF.csproj" />
+  </Folder>
 </Solution>
