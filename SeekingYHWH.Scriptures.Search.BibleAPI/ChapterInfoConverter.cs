@@ -44,7 +44,7 @@ internal static class ChapterInfoConverter
 				{
 					throw new EndOfStreamException();
 				}
-				value.Chapter = reader.GetString();
+				value.Chapter = reader.GetInt32();
 			}
 			else if (reader.ValueTextEquals(urlProperty))
 			{

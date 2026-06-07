@@ -35,7 +35,7 @@ internal static class VerseInfoConverter
 				{
 					throw new EndOfStreamException();
 				}
-				value.Verse = reader.GetString();
+				value.Verse = reader.GetInt32();
 			}
 			else if (reader.ValueTextEquals(textProperty))
 			{
