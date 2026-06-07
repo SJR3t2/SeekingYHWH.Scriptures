@@ -13,8 +13,8 @@ partial class Searcher
 	{
 		public static int LengthDescendingComparison(Searching x, Searching y)
 		{
-			var xReaderLength = x!.Reader!.Length;
-			var yReaderLength = y!.Reader!.Length;
+			var xReaderLength = x!.readerLength;
+			var yReaderLength = y!.readerLength;
 			if (xReaderLength == yReaderLength)
 			{
 				return 0;
@@ -33,17 +33,19 @@ partial class Searcher
 		private readonly string? pre;
 		
 		private BytesSplitReader? reader;
+		private readonly long readerLength;
 		private readonly BytesColumn[] header = new BytesColumn[1];
 		private readonly BytesColumn[] columns = new BytesColumn[2];
 		private readonly Queue<Verse> queue = new Queue<Verse>();
 
 		private bool finished = false;
 
-		public Searching(int book, string? pre, BytesSplitReader? reader)
+		public Searching(int book, string? pre, BytesSplitReader? reader, long readerLength)
 		{
 			this.book = book;
 			this.pre = pre;
 			this.reader = reader;
+			this.readerLength = readerLength;
 		}
 
 		~Searching()

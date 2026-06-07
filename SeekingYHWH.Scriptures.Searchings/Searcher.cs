@@ -68,7 +68,7 @@ public sealed partial class Searcher
 			var readerFile = new FileStream(readerPath, FileMode.Open, FileAccess.Read, FileShare.Read);
 			var readerStream = new BrotliStream(readerFile, CompressionMode.Decompress);
 			var reader = new BytesSplitReader(readerStream);
-			var searching = new Searching(searchingsBuilder.Count, book.Pre, reader);
+			var searching = new Searching(searchingsBuilder.Count, book.Pre, reader, readerFile.Length);
 			searchingsBuilder.Add(searching);
 		}
 		searchingsBuilder.Sort(searchingsComparison);
