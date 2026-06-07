@@ -18,6 +18,7 @@ internal static class  Program
 	}
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
+	private static TimeSpan wait = TimeSpan.FromSeconds(1);
 
 	private static readonly LanguageInfo[] languages = new LanguageInfo[]
 	{
@@ -131,18 +132,9 @@ internal static class  Program
 		using (var writerStream = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
 		using (var writer = new StreamWriter(writerStream))
 		{
-			for (var b = 0; true; )
+			foreach (var book in books)
 			{
-				var book = books[b];
 				ProcessBook(writer, collection, book, chapters);
-
-				++b;
-				if (b >= books.Length)
-				{
-					break;
-				}
-
-				writer.WriteLine();
 			}
 		}
 	}
@@ -151,7 +143,9 @@ internal static class  Program
 	{
 		chapters.Clear();
 
+		Thread.Sleep(wait);
 		var url = string.Format(bookURL, collection.Id, book);
+		Console.WriteLine(url);
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
 			BookConverter.Parse(chapters, reader, buffer);
@@ -167,7 +161,9 @@ internal static class  Program
 	{
 		verses.Clear();
 
+		Thread.Sleep(wait);
 		var url = chapter.URL;
+		Console.WriteLine(url);
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
 			ChapterConverter.Parse(verses, reader, buffer);
@@ -186,5 +182,7 @@ internal static class  Program
 			writer.Write(verseText);
 			writer.WriteLine();
 		}
+
+		writer.WriteLine();
 	}
 }
