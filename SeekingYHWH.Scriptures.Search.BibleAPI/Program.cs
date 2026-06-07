@@ -43,6 +43,8 @@ internal static class  Program
 		},
 	};
 	private static HttpClient client;
+	private static readonly byte[] buffer = new byte[4096];
+	private static readonly List<ChapterInfo> chapters = new List<ChapterInfo>();
 
 	private static void Prepare()
 	{
@@ -129,7 +131,7 @@ internal static class  Program
 			for (var b = 0; true; )
 			{
 				var book = books[b];
-				ProcessBook(writer, collection, book);
+				ProcessBook(writer, collection, book, chapters);
 
 				++b;
 				if (b >= books.Length)
@@ -142,11 +144,28 @@ internal static class  Program
 		}
 	}
 
-	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, string book)
+	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, string book, List<ChapterInfo> chapters)
 	{
+		chapters.Clear();
+
 		var url = string.Format(bookURL, collection.Id, book);
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
+			BookConverter.Parse(chapters, reader, buffer);
+		}
+
+		foreach (var chapter in chapters)
+		{
+			ProcessChapter(writer, chapter);
+		}
+	}
+
+	private static void ProcessChapter(StreamWriter writer, ChapterInfo chapter)
+	{
+		var url = chapter.URL;
+		using (var reader = client.GetStreamAsync(url).Result)
+		{
+			//TODO: Verses
 		}
 	}
 }
