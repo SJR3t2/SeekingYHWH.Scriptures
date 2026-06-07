@@ -67,6 +67,10 @@
             <StatusBarItem>
                 <TextBlock Text="Selected: 0" x:Name="selectedsCount"/>
             </StatusBarItem>
+			   <Separator/>
+			   <StatusBarItem>
+                <TextBlock Text="Took: 00:00:00.000" x:Name="took"/>
+            </StatusBarItem>
         </StatusBar>
         <Label DockPanel.Dock="Top" Content="Query:" HorizontalAlignment="Left"/>
         <TextBox DockPanel.Dock="Top" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Height="50" x:Name="queryText"/>

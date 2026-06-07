@@ -136,6 +136,8 @@ public partial class MainWindow : Window
 		found.SelectedItems.Clear();
 		found.ItemsSource = null;
 		scripturesCount.Text = "Scriptures: 0";
+		selectedsCount.Text = "Selected: 0";
+		this.took.Text = "Took: 00:00:00.000";
 
 		if (Languages.Locals.Count <= 0)
 		{
@@ -163,10 +165,13 @@ public partial class MainWindow : Window
 			return;
 		}
 
+		var started = Stopwatch.GetTimestamp();
 		verses = Options.Search(provider);
+		var took = Stopwatch.GetElapsedTime(started);
 
 		found.ItemsSource = verses;
 		scripturesCount.Text = "Scriptures: " + verses.Count;
+		this.took.Text = string.Format(@"Took: {0:hh\:mm\:ss\.fff}", took);
 	}
 
 	private void OnSelectedChanged(object sender, SelectionChangedEventArgs args)
