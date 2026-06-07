@@ -9,6 +9,8 @@ internal static class  Program
 	private const string host = "bible-api.com";
 	private const string bookURL = "/data/{0}/{1}";
 
+	private const char separator = '\t';
+
 	private static int Main(string[] args)
 	{
 		Prepare();
@@ -171,11 +173,18 @@ internal static class  Program
 			ChapterConverter.Parse(verses, reader, buffer);
 		}
 
-		//TODO: Write Book Chapter
+		writer.Write(chapter.Book);
+		writer.Write(' ');
+		writer.Write(chapter.Chapter);
+		writer.WriteLine();
 
 		foreach (var verse in verses)
 		{
-			//TODO: Write Verse
+			var verseText = verse.Text.Trim();
+			writer.Write(verse.Verse);
+			writer.Write(separator);
+			writer.Write(verseText);
+			writer.WriteLine();
 		}
 	}
 }
