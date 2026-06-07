@@ -8,4 +8,8 @@
     <StartupObject>SeekingYHWH.Scriptures.Search.BibleAPI.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SeekingYHWH.Scriptures.Search\SeekingYHWH.Scriptures.Search.csproj" />
+  </ItemGroup>
+
 </Project>
