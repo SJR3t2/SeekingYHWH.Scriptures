@@ -48,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\AssemblyInfo.Company.cs">
+    <Compile Include="..\AssemblyInfo.Company.cs">
       <Link>Properties\AssemblyInfo.Company.cs</Link>
     </Compile>
-    <Compile Include="..\..\AssemblyInfo.Revision.cs">
+    <Compile Include="..\AssemblyInfo.Revision.cs">
       <Link>Properties\AssemblyInfo.Revision.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />

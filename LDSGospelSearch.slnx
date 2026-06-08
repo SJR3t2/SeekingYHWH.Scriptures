@@ -1,0 +1,18 @@
+<Solution>
+  <Project Path="LDSGospelLanguages/LDSGospelLanguages.csproj" Id="1e1ccfd8-d8e3-463a-aa1d-eb07bfd23bef" />
+  <Project Path="LDSGospelSearch.Console/LDSGospelSearch.Console.csproj" Id="e5ad2e99-bf11-4745-9f93-2de8c32f9a38" />
+  <Project Path="LDSGospelSearch.GUI.Setup/LDSGospelSearch.GUI.Setup.vdproj" Type="Installer">
+    <Build />
+  </Project>
+  <Project Path="LDSGospelSearch.GUI/LDSGospelSearch.GUI.csproj" Id="190c71d6-c459-43f6-8dae-f0d226cc0fa9" />
+  <Project Path="LDSGospelSearch.Library.Search/LDSGospelSearch.Library.Search.csproj" Id="ace3b4ce-2ac3-4760-a16b-c56aeea6823e" />
+  <Project Path="LDSGospelSearch.Library/LDSGospelSearch.Library.csproj" Id="dcb13096-b7fa-4d4e-88a8-693632024955" />
+  <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors/SeekingYHWH.Scriptures.LDSGospelLibrary.Extractors.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures/SeekingYHWH.Scriptures.LDSGospelLibrary.Scriptures.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys.LISP.UnitTests/SeekingYHWH.Scriptures.Querys.LISP.UnitTests.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys.LISP/SeekingYHWH.Scriptures.Querys.LISP.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys.Parsers/SeekingYHWH.Scriptures.Querys.Parsers.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys.UnitTests/SeekingYHWH.Scriptures.Querys.UnitTests.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys.XML/SeekingYHWH.Scriptures.Querys.XML.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.Querys/SeekingYHWH.Scriptures.Querys.csproj" />
+</Solution>
