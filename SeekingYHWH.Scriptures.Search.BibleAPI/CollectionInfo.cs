@@ -9,5 +9,5 @@ namespace SeekingYHWH.Scriptures.Search.BibleAPI;
 internal sealed class CollectionInfo : SeekingYHWH.Scriptures.BookInfo
 {
 	public string Id { get; set; }
-	public string[] Books { get; set; }
+	public HashSet<string> Includes { get; set; }
 }

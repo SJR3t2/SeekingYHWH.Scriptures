@@ -9,7 +9,7 @@ internal static class  Program
 {
 	private const string schema = "https";
 	private const string host = "bible-api.com";
-	private const string bookURL = schema + "://" + host + "/data/{0}/{1}";
+	private const string bibleURL = schema + "://" + host + "/data/{0}";
 
 	private const char separator = '\t';
 
@@ -23,7 +23,7 @@ internal static class  Program
 	private static TimeSpan wait = TimeSpan.FromSeconds(3);
 	private static bool tsvDelete = true;
 
-	private static readonly string[] ot = new string[] //Missing Ester and Songs of Solomon on purpose
+	private static readonly HashSet<string> ot = new HashSet<string>() //Missing Ester and Songs of Solomon on purpose
 	{
 		"GEN", "EXO", "LEV", "NUM", "DEU", "JOS", "JDG", "RUT",
 		"1SA", "2SA", "1KI", "2KI", "1CH", "2CH", "EZR", "NEH",
@@ -31,7 +31,7 @@ internal static class  Program
 		"DAN", "HOS", "JOL", "AMO", "OBA", "JON", "MIC", "NAM",
 		"HAB", "ZEP", "HAG", "ZEC", "MAL",
 	};
-	private static readonly string[] nt = new string[]
+	private static readonly HashSet<string> nt = new HashSet<string>()
 	{
 		"MAT", "MRK", "LUK", "JHN", "ACT", "ROM", "1CO", "2CO",
 		"GAL", "EPH", "PHP", "COL", "1TH", "2TH", "1TI", "2TH",
@@ -52,7 +52,7 @@ internal static class  Program
 					Name = "Cherokee New Testament",
 					Pre = "CNT",
 					Id = "cherokee",
-					Books = nt,
+					Includes = nt,
 				},
 			},
 		},
@@ -68,7 +68,7 @@ internal static class  Program
 					Name = "Old Testament - WEB",
 					Pre = "WEB",
 					Id = "web",
-					Books = ot,
+					Includes = ot,
 				},
 				new CollectionInfo()
 				{
@@ -76,13 +76,14 @@ internal static class  Program
 					Name = "New Testament - WEB",
 					Pre = "WEB",
 					Id = "web",
-					Books = nt,
+					Includes = nt,
 				},
 			},
 		}
 	};
 	private static HttpClient client;
 	private static readonly byte[] buffer = new byte[32 * 1024];
+	private static readonly List<BookInfo> books = new List<BookInfo>();
 	private static readonly List<ChapterInfo> chapters = new List<ChapterInfo>();
 	private static readonly List<VerseInfo> verses = new List<VerseInfo>();
 
@@ -180,14 +181,42 @@ internal static class  Program
 		var languageCode = language.Code;
 		var bookCode = collection.Code;
 
+		books.Clear();
+		Thread.Sleep(wait);
+		var url = string.Format(bibleURL, collection.Id);
+		Console.WriteLine(url);
+		using (var reader = client.GetStreamAsync(url).Result)
+		{
+			BibleConverter.Parse(books, reader, buffer);
+		}
+
+		var includes = collection.Includes;
+		var included = 0;
+		foreach (var book in books)
+		{
+			if (includes.Contains(book.Id))
+			{
+				++included;
+			}
+		}
+		if (included <= 0)
+		{
+			Console.WriteLine("No books included for {0}", collection.Id);
+			return;
+		}
+
 		var tsvPath = Path.Combine(languageCode, bookCode + ".tsv");
-		var books = collection.Books;
 		using (var writerStream = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
 		using (var writer = new StreamWriter(writerStream))
 		{
 			foreach (var book in books)
 			{
-				ProcessBook(writer, collection, book, chapters);
+				if (!includes.Contains(book.Id!))
+				{
+					continue;
+				}
+
+				ProcessBook(writer, collection, book);
 			}
 		}
 
@@ -229,25 +258,26 @@ internal static class  Program
 		}
 	}
 
-	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, string book, List<ChapterInfo> chapters)
+	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, BookInfo book)
 	{
 		chapters.Clear();
 
 		Thread.Sleep(wait);
-		var url = string.Format(bookURL, collection.Id, book);
+		var url = book.URL;
 		Console.WriteLine(url);
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
 			BookConverter.Parse(chapters, reader, buffer);
 		}
 
+		var bookName = book.Name;
 		foreach (var chapter in chapters)
 		{
-			ProcessChapter(writer, chapter);
+			ProcessChapter(writer, bookName, chapter);
 		}
 	}
 
-	private static void ProcessChapter(StreamWriter writer, ChapterInfo chapter)
+	private static void ProcessChapter(StreamWriter writer, string bookName, ChapterInfo chapter)
 	{
 		verses.Clear();
 
@@ -259,7 +289,7 @@ internal static class  Program
 			ChapterConverter.Parse(verses, reader, buffer);
 		}
 
-		writer.Write(chapter.Book);
+		writer.Write(bookName);
 		writer.Write(' ');
 		writer.Write(chapter.Chapter);
 		writer.WriteLine();
