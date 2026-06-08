@@ -22,9 +22,6 @@
     <Project Path="SeekingYHWH.Scriptures.Searchings/SeekingYHWH.Scriptures.Searchings.csproj" />
   </Folder>
   <Folder Name="/Programs/">
-    <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
-    <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
-    <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
     <Project Path="SeekingYHWH.Scriptures.Search.Console/SeekingYHWH.Scriptures.Search.Console.csproj" />
     <Project Path="SeekingYHWH.Scriptures.Search.Maui/SeekingYHWH.Scriptures.Search.Maui.csproj">
       <Deploy />
@@ -34,5 +31,10 @@
       <Build />
     </Project>
     <Project Path="SeekingYHWH.Scriptures.Search.WPF/SeekingYHWH.Scriptures.Search.WPF.csproj" />
+  </Folder>
+  <Folder Name="/Utils/">
+    <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
   </Folder>
 </Solution>
