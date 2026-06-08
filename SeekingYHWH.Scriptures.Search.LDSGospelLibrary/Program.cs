@@ -474,18 +474,8 @@ internal static class Program
 			}
 		}
 
-		byte[] hash;
-		using (var hasher = SHA256.Create())
-		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-		{
-			hash = hasher.ComputeHash(reader);
-		}
-
 		var hashPath = Path.Combine(scripturesPath, languageCode, bookCode + ".tsv.hsh");
-		using (var writer = new FileStream(hashPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-		{
-			writer.Write(hash, 0, hash.Length);
-		}
+		Hash.Compute(tsvPath, hashPath);
 
 		var brPath = Path.Combine(scripturesPath, languageCode, bookCode + ".tsv.br");
 		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
