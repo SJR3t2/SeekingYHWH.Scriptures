@@ -1,11 +1,10 @@
 ﻿using System.IO;
 using System.IO.Compression;
 using System.Net;
-using System.Security.Cryptography;
 
 namespace SeekingYHWH.Scriptures.Search.BibleAPI;
 
-internal static class  Program
+internal static class Program
 {
 	private const string schema = "https";
 	private const string host = "bible-api.com";
@@ -220,20 +219,11 @@ internal static class  Program
 			}
 		}
 
-		byte[] hash;
-		using (var hasher = SHA256.Create())
-		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-		{
-			hash = hasher.ComputeHash(reader);
-		}
 
 		var languagePath = Path.Combine(scripturesPath, languageCode);
 
 		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
-		using (var writer = new FileStream(hashPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-		{
-			writer.Write(hash, 0, hash.Length);
-		}
+		Hash.Compute(tsvPath, hashPath);
 
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
 		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
