@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV/SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV/SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UI/SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UnitTests/SeekingYHWH.Scriptures.ConvertPassages.UnitTests.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class/SeekingYHWH.Scriptures.ConvertPassages.VersesTSV2Class.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer/SeekingYHWH.Scriptures.ConvertPassages.WPF.Installer.csproj" Id="e5a6a5d5-fa65-4b5f-85ea-037862101e54" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup/SeekingYHWH.Scriptures.ConvertPassages.WPF.Setup.vdproj" Type="Installer">
+    <Build />
+  </Project>
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.WPF/SeekingYHWH.Scriptures.ConvertPassages.WPF.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages/SeekingYHWH.Scriptures.ConvertPassages.csproj" />
+</Solution>
