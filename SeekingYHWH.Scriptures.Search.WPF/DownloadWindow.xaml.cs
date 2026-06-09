@@ -65,7 +65,6 @@ public partial class DownloadWindow : Window
 		languagePath = BookInfosPaths.GetFolder(Stores.Path, language);
 		booksBRPath = BookInfosPaths.GetBrPath(languagePath);
 		booksHSHPath = BookInfosPaths.GetHashPath(languagePath);
-		booksRefresh.IsEnabled = true;
 
 		if (File.Exists(booksHSHPath))
 		{
