@@ -8,11 +8,11 @@ namespace SeekingYHWH.Scriptures;
 
 public static class Hash
 {
-	public static void Compute(string sourcePath, string hashPath)
+	public static void Compute(string tsvPath, string hashPath)
 	{
 		byte[] hash;
 		using (var hasher = SHA256.Create())
-		using (var reader = new FileStream(sourcePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
 		{
 			hash = hasher.ComputeHash(reader);
 		}
