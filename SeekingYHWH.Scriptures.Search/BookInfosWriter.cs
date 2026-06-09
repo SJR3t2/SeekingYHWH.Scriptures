@@ -11,7 +11,7 @@ public sealed class BookInfosWriter : IDisposable
 	private const string header = "Code\tName\tPre";
 	private const char seperator = '\t';
 
-	public static BookInfosWriter Open(string path)
+	public static BookInfosWriter OpenTSV(string path)
 	{
 		var writerStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
 		var writer = new BookInfosWriter(writerStream);
@@ -20,7 +20,7 @@ public sealed class BookInfosWriter : IDisposable
 
 	public static void WriteTSV(string path, IEnumerable<BookInfo> values)
 	{
-		using (var writer = Open(path))
+		using (var writer = OpenTSV(path))
 		{
 			writer.Write(values);
 		}
