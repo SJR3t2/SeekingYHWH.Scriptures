@@ -55,11 +55,7 @@ public static class Books
 			return;
 		}
 
-		//Write
-		using (var writer = BookInfosWriter.OpenBR(brPath))
-		{
-			writer.Write(values);
-		}
+		BookInfosWriter.WriteBR(brPath, values);
 
 		var hashPath = LanguageInfosPaths.GetHashPath(path);
 		Hash.ComputeBR(brPath, hashPath);
