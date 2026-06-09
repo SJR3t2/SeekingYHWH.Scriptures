@@ -101,32 +101,16 @@ internal static class Program
 
 	private static int Execute()
 	{
-		WriteLanguages();
+		ProcessLanguages();
+		return 0;
+	}
+
+	private static void ProcessLanguages()
+	{
 		foreach (var language in languages)
 		{
 			ProcessLanguage(language);
 		}
-		return 0;
-	}
-
-	private static void WriteLanguages()
-	{
-		var values = new List<LanguageInfo>();
-		foreach (var value in languages)
-		{
-			var collections = value.Collections;
-			if (collections == null || collections.Length <= 0)
-			{
-				continue;
-			}
-
-			values.Add(value);
-		}
-		if (values.Count <= 0)
-		{
-			return;
-		}
-		Languages.Update(scripturesPath, values);
 	}
 
 	private static void ProcessLanguage(LanguageInfo language)
@@ -143,6 +127,7 @@ internal static class Program
 			return;
 		}
 
+		bool success = false;
 		foreach (var collection in language.Collections)
 		{
 			var includes = collection.Includes;
@@ -150,11 +135,18 @@ internal static class Program
 			{
 				continue;
 			}
-			ProcessCollection(language, collection);
+			if (ProcessCollection(language, collection))
+			{
+				success = true;
+			}
+		}
+		if (success)
+		{
+			Languages.Update(scripturesPath, language);
 		}
 	}
 
-	private static void ProcessCollection(LanguageInfo language, CollectionInfo collection)
+	private static bool ProcessCollection(LanguageInfo language, CollectionInfo collection)
 	{
 		var languageCode = language.Code;
 		var bookCode = collection.Code;
@@ -170,7 +162,7 @@ internal static class Program
 		}
 		if (books.Count <= 0)
 		{
-			return;
+			return false;
 		}
 
 		var includes = collection.Includes;
@@ -184,12 +176,12 @@ internal static class Program
 		}
 		if (included <= 0)
 		{
-			Console.WriteLine("No books included for {0}", collection.Id);
-			return;
+			return false;
 		}
 
 		var languagePath = Path.Combine(scripturesPath, languageCode);
 
+		var success = false;
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
 		using (var writer = Book.OpenWriterBR(brPath))
 		{
@@ -200,17 +192,36 @@ internal static class Program
 					continue;
 				}
 
-				ProcessBook(writer, collection, book);
+				if (ProcessBook(writer, collection, book))
+				{
+					success = true;
+				}
 			}
 		}
+		if (success)
+		{
+			var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
+			Hash.ComputeBR(brPath, hashPath);
 
-		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
-		Hash.ComputeBR(brPath, hashPath);
+			Books.Update(languagePath, collection);
 
-		Books.Update(languagePath, collection);
+			return true;
+		}
+		else
+		{
+			try
+			{
+				File.Delete(brPath);
+			}
+			catch
+			{
+				Console.WriteLine("can't delete {0}", brPath);
+			}
+			return false;
+		}
 	}
 
-	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, BookInfo book)
+	private static bool ProcessBook(StreamWriter writer, CollectionInfo collection, BookInfo book)
 	{
 		chapters.Clear();
 
@@ -223,17 +234,22 @@ internal static class Program
 		}
 		if (chapters.Count <= 0)
 		{
-			return;
+			return false;
 		}
 
+		var success = false;
 		var bookName = book.Name;
 		foreach (var chapter in chapters)
 		{
-			ProcessChapter(writer, bookName, chapter);
+			if (ProcessChapter(writer, bookName!, chapter))
+			{
+				success = true;
+			}
 		}
+		return success;
 	}
 
-	private static void ProcessChapter(StreamWriter writer, string bookName, ChapterInfo chapter)
+	private static bool ProcessChapter(StreamWriter writer, string bookName, ChapterInfo chapter)
 	{
 		verses.Clear();
 
@@ -246,7 +262,7 @@ internal static class Program
 		}
 		if (verses.Count <= 0)
 		{
-			return;
+			return false;
 		}
 
 		writer.Write(bookName);
@@ -264,5 +280,6 @@ internal static class Program
 		}
 
 		writer.WriteLine();
+		return true;
 	}
 }
