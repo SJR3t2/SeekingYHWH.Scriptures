@@ -182,6 +182,7 @@ internal static class Program
 		var languagePath = Path.Combine(scripturesPath, languageCode);
 
 		var success = false;
+		Directory.CreateDirectory(languagePath);
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
 		using (var writer = Book.OpenWriterBR(brPath))
 		{
