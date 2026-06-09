@@ -20,7 +20,6 @@ internal static class Program
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
 	private static TimeSpan wait = TimeSpan.FromSeconds(3);
-	private static bool tsvDelete = true;
 
 	private static readonly HashSet<string> ot = new HashSet<string>() //Missing Ester and Songs of Solomon on purpose
 	{
@@ -147,31 +146,10 @@ internal static class Program
 			Console.Error.WriteLine("Can't create {0} {1}", languagePath, exception.Message);
 			return;
 		}
-		try
-		{
-			Directory.CreateDirectory(languageCode);
-		}
-		catch (Exception exception)
-		{
-			Console.Error.WriteLine("Can't create {0} {1}", languageCode, exception.Message);
-			return;
-		}
 
 		foreach (var collection in language.Collections)
 		{
 			ProcessCollection(language, collection);
-		}
-
-		if (tsvDelete)
-		{
-			try
-			{
-				Directory.Delete(languageCode, true);
-			}
-			catch (Exception exception)
-			{
-				Console.Error.WriteLine("Can't delete {0} {1}", languageCode, exception.Message);
-			}
 		}
 	}
 
@@ -204,8 +182,10 @@ internal static class Program
 			return;
 		}
 
-		var tsvPath = Path.Combine(languageCode, bookCode + ".tsv");
-		using (var writer = Book.OpenWriterTSV(tsvPath))
+		var languagePath = Path.Combine(scripturesPath, languageCode);
+
+		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
+		using (var writer = Book.OpenWriterBR(brPath))
 		{
 			foreach (var book in books)
 			{
@@ -218,28 +198,10 @@ internal static class Program
 			}
 		}
 
-
-		var languagePath = Path.Combine(scripturesPath, languageCode);
-
 		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
-		Hash.ComputeTSV(tsvPath, hashPath);
-
-		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
-		Compression.Compress(tsvPath, brPath);
+		Hash.ComputeBR(brPath, hashPath);
 
 		Books.Update(languagePath, new[] { collection });
-
-		if (tsvDelete)
-		{
-			try
-			{
-				File.Delete(tsvPath);
-			}
-			catch (Exception exception)
-			{
-				Console.Error.WriteLine("Can't delete {0} {1}", tsvPath, exception.Message);
-			}
-		}
 	}
 
 	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, BookInfo book)
