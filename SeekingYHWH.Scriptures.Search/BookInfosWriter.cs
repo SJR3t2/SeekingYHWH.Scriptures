@@ -26,7 +26,7 @@ public sealed class BookInfosWriter : IDisposable
 		}
 	}
 
-	public static BookInfosWriter OpenBr(string path)
+	public static BookInfosWriter OpenBR(string path)
 	{
 		var writerFile = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
 		var writerStream = new BrotliStream(writerFile, CompressionLevel.SmallestSize);
@@ -36,7 +36,7 @@ public sealed class BookInfosWriter : IDisposable
 
 	public static void WriteBR(string path, IEnumerable<BookInfo> values)
 	{
-		using (var writer = BookInfosWriter.OpenBr(path))
+		using (var writer = BookInfosWriter.OpenBR(path))
 		{
 			writer.Write(values);
 		}

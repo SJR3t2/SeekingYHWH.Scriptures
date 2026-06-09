@@ -56,7 +56,7 @@ public static class Books
 		}
 
 		//Write
-		using (var writer = BookInfosWriter.OpenBr(brPath))
+		using (var writer = BookInfosWriter.OpenBR(brPath))
 		{
 			writer.Write(values);
 		}
