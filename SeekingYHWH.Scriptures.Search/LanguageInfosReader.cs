@@ -21,6 +21,29 @@ public sealed class LanguageInfosReader : IDisposable
 		return reader;
 	}
 
+	public static void ReadTSV(string path, List<LanguageInfo> values)
+	{
+		using (var reader = OpenTSV(path))
+		{
+			while (reader.TryRead(out var value))
+			{
+				values.Add(value);
+			}
+		}
+	}
+
+	public static void ReadTSV(string path, List<LanguageInfo> values, Dictionary<string, int> offsets)
+	{
+		using (var reader = OpenTSV(path))
+		{
+			while (reader.TryRead(out var value))
+			{
+				offsets.Add(value.Code, values.Count);
+				values.Add(value);
+			}
+		}
+	}
+
 	public static LanguageInfosReader OpenBR(string path)
 	{
 		var readerFile = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
