@@ -193,7 +193,7 @@ internal static class Program
 		var included = 0;
 		foreach (var book in books)
 		{
-			if (includes.Contains(book.Id))
+			if (includes.Contains(book.Id!))
 			{
 				++included;
 			}
