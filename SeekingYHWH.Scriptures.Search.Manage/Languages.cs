@@ -56,11 +56,7 @@ public static partial class Languages
 			return;
 		}
 
-		//Write
-		using (var writer = LanguageInfosWriter.OpenBR(brPath))
-		{
-			writer.Write(values);
-		}
+		LanguageInfosWriter.WriteBR(brPath, values);
 
 		var hashPath = LanguageInfosPaths.GetHashPath(path);
 		Hash.ComputeBR(brPath, hashPath);
