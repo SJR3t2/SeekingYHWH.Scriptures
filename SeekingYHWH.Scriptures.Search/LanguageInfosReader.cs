@@ -21,7 +21,7 @@ public sealed class LanguageInfosReader : IDisposable
 		return reader;
 	}
 
-	public static LanguageInfosReader OpenBr(string path)
+	public static LanguageInfosReader OpenBR(string path)
 	{
 		var readerFile = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
 		var readerStream = new BrotliStream(readerFile, CompressionMode.Decompress);

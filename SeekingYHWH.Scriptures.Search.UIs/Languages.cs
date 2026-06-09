@@ -203,7 +203,7 @@ public static class Languages
 		masters.Clear();
 		mastersOffsets.Clear();
 
-		using (var reader = LanguageInfosReader.OpenBr(mastersBRPath))
+		using (var reader = LanguageInfosReader.OpenBR(mastersBRPath))
 		{
 			while (reader.TryRead(out var value))
 			{

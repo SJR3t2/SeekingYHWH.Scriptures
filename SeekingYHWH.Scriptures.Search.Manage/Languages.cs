@@ -18,7 +18,7 @@ public static partial class Languages
 		var offsets = new Dictionary<string, int>();
 		if (File.Exists(brPath))
 		{
-			using (var reader = LanguageInfosReader.OpenBr(brPath))
+			using (var reader = LanguageInfosReader.OpenBR(brPath))
 			{
 				while (reader.TryRead(out var value))
 				{

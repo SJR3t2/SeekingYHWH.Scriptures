@@ -74,7 +74,7 @@ internal static class Program
 
 	private static void ReadLanguages()
 	{
-		using (var reader = LanguageInfosReader.OpenBr(LanguageInfosPaths.GetPathBr(scripturesPath)))
+		using (var reader = LanguageInfosReader.OpenBR(LanguageInfosPaths.GetPathBr(scripturesPath)))
 		{
 			while (true)
 			{

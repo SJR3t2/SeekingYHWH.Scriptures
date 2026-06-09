@@ -160,7 +160,7 @@ internal static class Program
 	{
 		languages.Clear();
 		var path = LanguageInfosPaths.GetPathBr(scripturesPath);
-		using (var reader = LanguageInfosReader.OpenBr(path))
+		using (var reader = LanguageInfosReader.OpenBR(path))
 		{
 			while (reader.TryRead(out var value))
 			{
