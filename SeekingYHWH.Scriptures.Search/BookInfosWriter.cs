@@ -36,7 +36,7 @@ public sealed class BookInfosWriter : IDisposable
 
 	public static void WriteBR(string path, IEnumerable<BookInfo> values)
 	{
-		using (var writer = BookInfosWriter.OpenBR(path))
+		using (var writer = OpenBR(path))
 		{
 			writer.Write(values);
 		}
