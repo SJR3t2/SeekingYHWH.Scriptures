@@ -18,7 +18,7 @@ public sealed class LanguageInfosWriter : IDisposable
 		return writer;
 	}
 
-	public static LanguageInfosWriter OpenBr(string path)
+	public static LanguageInfosWriter OpenBR(string path)
 	{
 		var writerFile = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
 		var writerStream = new BrotliStream(writerFile, CompressionLevel.SmallestSize);

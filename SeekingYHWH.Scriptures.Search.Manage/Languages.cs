@@ -57,7 +57,7 @@ public static partial class Languages
 		}
 
 		//Write
-		using (var writer = LanguageInfosWriter.OpenBr(brPath))
+		using (var writer = LanguageInfosWriter.OpenBR(brPath))
 		{
 			writer.Write(values);
 		}
