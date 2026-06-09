@@ -159,12 +159,17 @@ internal static class Program
 		var bookCode = collection.Code;
 
 		books.Clear();
+
 		Thread.Sleep(wait);
 		var url = string.Format(bibleURL, collection.Id);
 		Console.WriteLine(url);
 		using (var reader = client.GetStreamAsync(url).Result)
 		{
 			BibleConverter.Parse(books, reader, buffer);
+		}
+		if (books.Count <= 0)
+		{
+			return;
 		}
 
 		var includes = collection.Includes;
