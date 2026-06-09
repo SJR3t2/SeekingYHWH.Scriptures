@@ -19,8 +19,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Content="Remove Books List" x:Name="booksRemove"/>
-			<Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Content="Refresh Books List" Click="OnBooksDownload"/>
+			   <Button Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Content="Remove Books List" Click="OnBooksRemove" x:Name="booksRemove"/>
+			   <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Content="Refresh Books List" Click="OnBooksDownload"/>
             <Button Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" Content="Refresh Languages" Click="OnLanguagesDownload"/>
         </Grid>
         <DataGrid AutoGenerateColumns="False" x:Name="booksList">

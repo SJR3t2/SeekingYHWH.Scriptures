@@ -147,7 +147,7 @@ public partial class DownloadWindow : Window
 		}
 	}
 
-	private void BooksRemove(object sender, EventArgs args)
+	private void OnBooksRemove(object sender, EventArgs args)
 	{
 		booksList.ItemsSource = null;
 		booksRemove.IsEnabled = false;
