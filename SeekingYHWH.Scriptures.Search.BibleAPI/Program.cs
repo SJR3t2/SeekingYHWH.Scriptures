@@ -286,7 +286,7 @@ internal static class Program
 
 		foreach (var verse in verses)
 		{
-			var verseText = verse.Text.Trim();
+			var verseText = verse.Text!.Trim();
 			writer.Write(verse.Verse);
 			writer.Write(separator);
 			writer.Write(verseText);
