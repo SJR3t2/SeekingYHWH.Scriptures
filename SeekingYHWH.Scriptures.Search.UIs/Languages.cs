@@ -226,7 +226,7 @@ public static class Languages
 	private static void LocalsRead()
 	{
 		var removed = false;
-		using (var reader = LanguageInfosReader.Open(localsPath))
+		using (var reader = LanguageInfosReader.OpenTSV(localsPath))
 		{
 			while (reader.TryRead(out var value))
 			{

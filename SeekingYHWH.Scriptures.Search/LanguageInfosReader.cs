@@ -14,7 +14,7 @@ public sealed class LanguageInfosReader : IDisposable
 	private const string headerName = "Name";
 	private const byte separator = BytesSplitReader.Tab;
 
-	public static LanguageInfosReader Open(string path)
+	public static LanguageInfosReader OpenTSV(string path)
 	{
 		var readerStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
 		var reader = new LanguageInfosReader(readerStream);
