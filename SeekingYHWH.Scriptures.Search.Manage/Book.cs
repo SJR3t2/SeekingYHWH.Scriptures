@@ -22,4 +22,11 @@ public static class Book
 		var writer = new StreamWriter(writerStream);
 		return writer;
 	}
+
+	public static StreamReader OpenReaderTSV(string path)
+	{
+		var readerStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+		var reader = new StreamReader(readerStream);
+		return reader;
+	}
 }
