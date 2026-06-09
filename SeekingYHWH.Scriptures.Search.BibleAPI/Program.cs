@@ -234,6 +234,10 @@ internal static class Program
 		{
 			ChapterConverter.Parse(verses, reader, buffer);
 		}
+		if (verses.Count <= 0)
+		{
+			return;
+		}
 
 		writer.Write(bookName);
 		writer.Write(' ');
