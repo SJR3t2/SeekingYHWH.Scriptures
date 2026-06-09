@@ -26,6 +26,14 @@ public sealed class LanguageInfosWriter : IDisposable
 		return writer;
 	}
 
+	public static void WriteBR(string path, IEnumerable<LanguageInfo> values)
+	{
+		using (var writer = OpenBR(path))
+		{
+			writer.Write(values);
+		}
+	}
+
 	private Stream stream;
 	private StreamWriter writer;
 
