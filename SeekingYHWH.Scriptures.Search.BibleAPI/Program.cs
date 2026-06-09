@@ -145,6 +145,11 @@ internal static class Program
 
 		foreach (var collection in language.Collections)
 		{
+			var includes = collection.Includes;
+			if (includes == null || includes.Count <= 0)
+			{
+				continue;
+			}
 			ProcessCollection(language, collection);
 		}
 	}
