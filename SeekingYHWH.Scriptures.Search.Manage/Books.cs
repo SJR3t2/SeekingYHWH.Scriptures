@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.IO.Compression;
 using System.Security.Cryptography;
@@ -59,5 +60,10 @@ public static class Books
 
 		var hashPath = LanguageInfosPaths.GetHashPath(path);
 		Hash.ComputeBR(brPath, hashPath);
+	}
+
+	public static void Update(string path, BookInfo book)
+	{
+		Update(path, new[] { book });
 	}
 }
