@@ -92,15 +92,11 @@ internal static class Program
 
 	private static void PrepareClient()
 	{
-		var handler = new HttpClientHandler()
+		var handler = new SocketsHttpHandler()
 		{
 			AutomaticDecompression = DecompressionMethods.All,
 		};
 		client = new HttpClient(handler);
-		client.BaseAddress = new Uri(schema + "://" + host + "/");
-		var headers = client.DefaultRequestHeaders;
-		headers.Add("Host", host);
-		headers.Add("Connection", "Keep-Alive");
 	}
 
 	private static int Execute()
