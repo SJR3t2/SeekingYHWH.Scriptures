@@ -226,12 +226,7 @@ internal static class Program
 		Hash.Compute(tsvPath, hashPath);
 
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
-		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-		using (var writer = new BrotliStream(writerStream, CompressionLevel.SmallestSize))
-		using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-		{
-			reader.CopyTo(writer);
-		}
+		Compression.Compress(tsvPath, brPath);
 
 		Books.Update(languagePath, new[] { collection });
 
