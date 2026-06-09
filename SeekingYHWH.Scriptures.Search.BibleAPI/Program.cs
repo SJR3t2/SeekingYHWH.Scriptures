@@ -135,7 +135,7 @@ internal static class Program
 			{
 				continue;
 			}
-			if (ProcessCollection(language, collection))
+			if (ProcessCollection(language, collection, languagePath))
 			{
 				success = true;
 			}
@@ -144,11 +144,21 @@ internal static class Program
 		{
 			Languages.Update(scripturesPath, language);
 		}
+		else
+		{
+			try
+			{
+				Directory.Delete(languagePath);
+			}
+			catch
+			{
+				//nothing on purpose
+			}
+		}
 	}
 
-	private static bool ProcessCollection(LanguageInfo language, CollectionInfo collection)
+	private static bool ProcessCollection(LanguageInfo language, CollectionInfo collection, string languagePath)
 	{
-		var languageCode = language.Code;
 		var bookCode = collection.Code;
 
 		books.Clear();
@@ -179,10 +189,7 @@ internal static class Program
 			return false;
 		}
 
-		var languagePath = Path.Combine(scripturesPath, languageCode);
-
 		var success = false;
-		Directory.CreateDirectory(languagePath);
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
 		using (var writer = Book.OpenWriterBR(brPath))
 		{
