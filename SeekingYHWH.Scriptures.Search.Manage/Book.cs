@@ -29,4 +29,12 @@ public static class Book
 		var reader = new StreamReader(readerStream);
 		return reader;
 	}
+
+	public static StreamReader OpenReaderBR(string path)
+	{
+		var readerFile = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+		var readerStream = new BrotliStream(readerFile, CompressionMode.Decompress);
+		var reader = new StreamReader(readerStream);
+		return reader;
+	}
 }
