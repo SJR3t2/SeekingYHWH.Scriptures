@@ -8,7 +8,7 @@ namespace SeekingYHWH.Scriptures;
 
 public static class Hash
 {
-	public static void Compute(string tsvPath, string hashPath)
+	public static void ComputeTSV(string tsvPath, string hashPath)
 	{
 		byte[] hash;
 		using (var hasher = SHA256.Create())

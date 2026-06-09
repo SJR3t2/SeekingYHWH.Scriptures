@@ -475,7 +475,7 @@ internal static class Program
 		}
 
 		var hashPath = Path.Combine(scripturesPath, languageCode, bookCode + ".tsv.hsh");
-		Hash.Compute(tsvPath, hashPath);
+		Hash.ComputeTSV(tsvPath, hashPath);
 
 		var brPath = Path.Combine(scripturesPath, languageCode, bookCode + ".tsv.br");
 		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))

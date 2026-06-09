@@ -223,7 +223,7 @@ internal static class Program
 		var languagePath = Path.Combine(scripturesPath, languageCode);
 
 		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
-		Hash.Compute(tsvPath, hashPath);
+		Hash.ComputeTSV(tsvPath, hashPath);
 
 		var brPath = Path.Combine(languagePath, bookCode + ".tsv.br");
 		Compression.Compress(tsvPath, brPath);
