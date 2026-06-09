@@ -201,7 +201,7 @@ internal static class Program
 		var hashPath = Path.Combine(languagePath, bookCode + ".tsv.hsh");
 		Hash.ComputeBR(brPath, hashPath);
 
-		Books.Update(languagePath, new[] { collection });
+		Books.Update(languagePath, collection);
 	}
 
 	private static void ProcessBook(StreamWriter writer, CollectionInfo collection, BookInfo book)
