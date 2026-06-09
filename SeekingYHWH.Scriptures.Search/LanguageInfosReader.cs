@@ -29,6 +29,29 @@ public sealed class LanguageInfosReader : IDisposable
 		return reader;
 	}
 
+	public static void ReadBR(string path, List<LanguageInfo> values)
+	{
+		using (var reader = OpenBR(path))
+		{
+			while (reader.TryRead(out var value))
+			{
+				values.Add(value);
+			}
+		}
+	}
+
+	public static void ReadBR(string path, List<LanguageInfo> values, Dictionary<string, int> offsets)
+	{
+		using (var reader = OpenBR(path))
+		{
+			while (reader.TryRead(out var value))
+			{
+				offsets.Add(value.Code, values.Count);
+				values.Add(value);
+			}
+		}
+	}
+
 	private Stream stream;
 	private BytesSplitReader reader;
 
