@@ -11,7 +11,7 @@ public sealed class LanguageInfosWriter : IDisposable
 	private const string header = "Code\tName";
 	private const char seperator = '\t';
 
-	public static LanguageInfosWriter Open(string path)
+	public static LanguageInfosWriter OpenTSV(string path)
 	{
 		var writerStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
 		var writer = new LanguageInfosWriter(writerStream);

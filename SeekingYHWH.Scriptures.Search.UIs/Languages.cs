@@ -63,7 +63,7 @@ public static class Languages
 		localsSet.Add(languageCode);
 		locals.Sort(localsComparison);
 
-		using (var writer = LanguageInfosWriter.Open(localsPath))
+		using (var writer = LanguageInfosWriter.OpenTSV(localsPath))
 		{
 			writer.Write(locals);
 		}
@@ -88,7 +88,7 @@ public static class Languages
 
 		if (locals.Count > 0)
 		{
-			using (var writer = LanguageInfosWriter.Open(localsPath))
+			using (var writer = LanguageInfosWriter.OpenTSV(localsPath))
 			{
 				writer.Write(locals);
 			}
@@ -181,7 +181,7 @@ public static class Languages
 		}
 		if (removed)
 		{
-			using (var writer = LanguageInfosWriter.Open(localsPath))
+			using (var writer = LanguageInfosWriter.OpenTSV(localsPath))
 			{
 				writer.Write(locals);
 			}
@@ -245,7 +245,7 @@ public static class Languages
 		{
 			if (locals.Count > 0)
 			{
-				using (var writer = LanguageInfosWriter.Open(localsPath))
+				using (var writer = LanguageInfosWriter.OpenTSV(localsPath))
 				{
 					writer.Write(locals);
 				}
