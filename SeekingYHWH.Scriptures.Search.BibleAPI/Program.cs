@@ -215,6 +215,10 @@ internal static class Program
 		{
 			BookConverter.Parse(chapters, reader, buffer);
 		}
+		if (chapters.Count <= 0)
+		{
+			return;
+		}
 
 		var bookName = book.Name;
 		foreach (var chapter in chapters)
