@@ -54,4 +54,9 @@ public static partial class Languages
 		var hashPath = LanguageInfosPaths.GetHashPath(path);
 		Hash.ComputeBR(brPath, hashPath);
 	}
+
+	public static void Update(string path, LanguageInfo language)
+	{
+		Update(path, new LanguageInfo[] { language });
+	}
 }
