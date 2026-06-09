@@ -73,11 +73,11 @@ public partial class DownloadWindow : Window
 		}
 		else
 		{
-			BooksDownload(null, null);
+			OnBooksDownload(null, null);
 		}
 	}
 
-	private async void BooksDownload(object sender, EventArgs args)
+	private async void OnBooksDownload(object sender, EventArgs args)
 	{
 		var client = new HttpClient();
 
