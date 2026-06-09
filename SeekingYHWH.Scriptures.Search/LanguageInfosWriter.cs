@@ -18,6 +18,14 @@ public sealed class LanguageInfosWriter : IDisposable
 		return writer;
 	}
 
+	public static void WriteTSV(string path, IEnumerable<LanguageInfo> values)
+	{
+		using (var writer = OpenTSV(path))
+		{
+			writer.Write(values);
+		}
+	}
+
 	public static LanguageInfosWriter OpenBR(string path)
 	{
 		var writerFile = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
