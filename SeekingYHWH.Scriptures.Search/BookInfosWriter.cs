@@ -26,6 +26,14 @@ public sealed class BookInfosWriter : IDisposable
 		return writer;
 	}
 
+	public static void WriteBR(string path, IEnumerable<BookInfo> values)
+	{
+		using (var writer = BookInfosWriter.OpenBr(path))
+		{
+			writer.Write(values);
+		}
+	}
+
 	private Stream stream;
 	private StreamWriter writer;
 
