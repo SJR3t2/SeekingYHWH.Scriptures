@@ -205,8 +205,7 @@ internal static class Program
 		}
 
 		var tsvPath = Path.Combine(languageCode, bookCode + ".tsv");
-		using (var writerStream = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-		using (var writer = new StreamWriter(writerStream))
+		using (var writer = Book.OpenWriterTSV(tsvPath))
 		{
 			foreach (var book in books)
 			{

@@ -7,7 +7,7 @@ namespace SeekingYHWH.Scriptures;
 
 public static class Book
 {
-	public static StreamWriter OpenTSV(string path)
+	public static StreamWriter OpenWriterTSV(string path)
 	{
 		var writerStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
 		var writer = new StreamWriter(writerStream);
