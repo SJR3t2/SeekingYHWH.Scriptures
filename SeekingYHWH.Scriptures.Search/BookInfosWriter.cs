@@ -18,6 +18,14 @@ public sealed class BookInfosWriter : IDisposable
 		return writer;
 	}
 
+	public static void WriteTSV(string path, IEnumerable<BookInfo> values)
+	{
+		using (var writer = Open(path))
+		{
+			writer.Write(values);
+		}
+	}
+
 	public static BookInfosWriter OpenBr(string path)
 	{
 		var writerFile = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Read);
