@@ -17,4 +17,14 @@ public static class Compression
 			reader.CopyTo(writer);
 		}
 	}
+
+	public static void Decompress(string brPath, string tsvPath)
+	{
+		using (var readerStream = new FileStream(brPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+		using (var reader = new BrotliStream(readerStream, CompressionMode.Decompress))
+		using (var writer = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
+		{
+			reader.CopyTo(writer);
+		}
+	}
 }
