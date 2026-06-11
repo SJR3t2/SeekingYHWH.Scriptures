@@ -6,81 +6,84 @@
         xmlns:local="clr-namespace:SeekingYHWH.Scriptures"
         mc:Ignorable="d"
         Title="Scriptures Search - SeekingYHWH" Height="450" Width="800" Loaded="OnLoaded">
-    <DockPanel LastChildFill="True">
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
-                <MenuItem Header="Query _Open" Click="OnQueryOpen"/>
-                <MenuItem Header="Query _Save" Click="OnQuerySave"/>
-                <Separator/>
-                <MenuItem Header="Scriptures Save _All" Click="OnScripturesSaveAll"/>
-                <MenuItem Header="Scriptures Save Selec_ted" Click="OnSaveSelected"/>
-                <Separator/>
-                <MenuItem Header="_Exit" Click="OnExit"/>
-            </MenuItem>
-            <MenuItem Header="_Edit">
-                <MenuItem Header="Scriptures Copy _All" Click="OnScripturesCopyAll"/>
-                <MenuItem Header="Scriptures Copy _Selected" Click="OnScripturesCopySelected"/>
-                <MenuItem Header="Scriptures Clear Selecte_d" Click="OnScripturesClearSelected"/>
-                <Separator/>
-                <MenuItem Header="Query _Paste" Click="OnQueryPaste"/>
-                <MenuItem Header="Query _Copy" Click="OnQueryCopy"/>
-                <MenuItem Header="Query C_lear" Click="OnQueryClear"/>
-            </MenuItem>
-            <MenuItem Header="_Options" Click="OnOptions"/>
-            <MenuItem Header="_Download" Click="OnDownload"/>
-            <MenuItem Header="_Help">
-				   <MenuItem Header="A_bout" Click="OnAbout"/>
-				   <MenuItem Header="Available _Querys" Click="OnHelpQuerys"/>
-               <MenuItem Header="_What's Excluded" Click="OnWhatsExcluded"/>
-               <MenuItem Header="_Regex">
-                  <MenuItem Header="Microsoft Documentation" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=netframework-4.8"/>
-                  <MenuItem Header="Microsoft Learn" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions"/>
-                  <MenuItem Header="Microsoft Cheat Sheet" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/previous-versions/troubleshoot/winautomation/process-development-tips/text-manipulation/regular-expressions-cheat-sheet"/>
-                  <MenuItem Header="Mikesdotnetting Cheat Sheet" Click="OnLink" DataContext="https://www.mikesdotnetting.com/article/46/c-regular-expressions-cheat-sheet"/>
-                  <MenuItem Header="Medium Cheatsheet" Click="OnLink" DataContext="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285"/>
-                  <MenuItem Header="C# Corner Regex" Click="OnLink" DataContext="https://www.c-sharpcorner.com/article/regular-expressions-in-net/"/>
-                  <MenuItem Header="C# Corner Regex Examples" Click="OnLink" DataContext="https://www.c-sharpcorner.com/article/c-sharp-regex-examples/"/>
-                  <MenuItem Header="Regex Storm Tester" Click="OnLink" DataContext="http://regexstorm.net/tester"/>
-                </MenuItem>
-                <MenuItem Header="_Examples">
-                  <MenuItem Header="Godhead" Click="OnExample" DataContext="And(Or(Regex(\bGod,None),Regex(\bFather)),Or(Regex(\bLord,None),Regex(\bSon,None),Regex(\bJesus,None),Regex(\bChrist),Regex(\bMessiah,None)),Or(Regex(\bspirit),Regex(\bghost)))"/>
-                  <MenuItem Header="All Things" Click="OnExample" DataContext="Index(&quot;all things&quot;)"/>
-                </MenuItem>
-                <Separator/>
-                <MenuItem Header="SeekingYHWH _About" Click="OnLink" DataContext="http://seekingyhwh.org/about/"/>
-                <MenuItem Header="SeekingYHWH _Posts" Click="OnLink" DataContext="http://seekingyhwh.org/posts/"/>
-                <MenuItem Header="SeekingYHWH _Scripture Study" Click="OnLink" DataContext="http://seekingyhwh.org/scripture-study/"/>
-                <MenuItem Header="SeekingYHWH _Resources" Click="OnLink" DataContext="http://seekingyhwh.org/resources/"/>
-                <MenuItem Header="SeekingYHWH _Torah" Click="OnLink" DataContext="http://seekingyhwh.org/torah/"/>
-                <MenuItem Header="SeekingYHWH _Law of Moses" Click="OnLink" DataContext="http://seekingyhwh.org/law-of-moses/"/>
-                <MenuItem Header="SeekingYHWH Lectures on _Faith" Click="OnLink" DataContext="http://seekingyhwh.org/lectures-on-faith/"/>
-                <MenuItem Header="SeekingYHWH S_oftware" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/"/>
-                <MenuItem Header="SeekingYHWH Scriptures Search _Download" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/scriptures-search/"/>
-                <MenuItem Header="SeekingYHWH _Contact" Click="OnLink" DataContext="https://seekingyhwh.org/contact/"/>
-            </MenuItem>
-        </Menu>
-        <StatusBar DockPanel.Dock="Bottom">
-            <StatusBarItem>
-                <TextBlock Text="Scriptures: 0" x:Name="scripturesCount"/>
-            </StatusBarItem>
-            <Separator/>
-            <StatusBarItem>
-                <TextBlock Text="Selected: 0" x:Name="selectedsCount"/>
-            </StatusBarItem>
-			   <Separator/>
-			   <StatusBarItem>
-                <TextBlock Text="Took: 00:00:00.000" x:Name="took"/>
-            </StatusBarItem>
-        </StatusBar>
-        <Label DockPanel.Dock="Top" Content="Query:" HorizontalAlignment="Left"/>
-        <TextBox DockPanel.Dock="Top" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Height="50" x:Name="queryText"/>
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Copy All" Click="OnScripturesCopyAll"/>
-            <Button Content="Copy Selected" Click="OnScripturesCopySelected"/>
-            <Button Content="Clear Selected" Click="OnScripturesClearSelected"/>
-            <Button Content="Search" IsDefault="True" Click="OnSearch"/>
-        </StackPanel>
-        <ListView SelectionMode="Multiple" x:Name="found" SelectionChanged="OnSelectedChanged">
-        </ListView>
-    </DockPanel>
+	<DockPanel LastChildFill="True">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_File">
+				<MenuItem Header="Query _Open" Click="OnQueryOpen"/>
+				<MenuItem Header="Query _Save" Click="OnQuerySave"/>
+				<Separator/>
+				<MenuItem Header="Scriptures Save _All" Click="OnScripturesSaveAll"/>
+				<MenuItem Header="Scriptures Save Selec_ted" Click="OnSaveSelected"/>
+				<Separator/>
+				<MenuItem Header="_Exit" Click="OnExit"/>
+			</MenuItem>
+			<MenuItem Header="_Edit">
+				<MenuItem Header="Scriptures Copy _All" Click="OnScripturesCopyAll"/>
+				<MenuItem Header="Scriptures Copy _Selected" Click="OnScripturesCopySelected"/>
+				<MenuItem Header="Scriptures Clear Selecte_d" Click="OnScripturesClearSelected"/>
+				<Separator/>
+				<MenuItem Header="Query _Paste" Click="OnQueryPaste"/>
+				<MenuItem Header="Query _Copy" Click="OnQueryCopy"/>
+				<MenuItem Header="Query C_lear" Click="OnQueryClear"/>
+			</MenuItem>
+			<MenuItem Header="_Options" Click="OnOptions"/>
+			<MenuItem Header="_Download" Click="OnDownload"/>
+			<MenuItem Header="_Help">
+				<MenuItem Header="A_bout" Click="OnAbout"/>
+				<MenuItem Header="Available _Querys" Click="OnHelpQuerys"/>
+				<MenuItem Header="_What's Excluded" Click="OnWhatsExcluded"/>
+				<MenuItem Header="_Regex">
+					<MenuItem Header="Microsoft Documentation" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=netframework-4.8"/>
+					<MenuItem Header="Microsoft Learn" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions"/>
+					<MenuItem Header="Microsoft Cheat Sheet" Click="OnLink" DataContext="https://learn.microsoft.com/en-us/previous-versions/troubleshoot/winautomation/process-development-tips/text-manipulation/regular-expressions-cheat-sheet"/>
+					<MenuItem Header="Mikesdotnetting Cheat Sheet" Click="OnLink" DataContext="https://www.mikesdotnetting.com/article/46/c-regular-expressions-cheat-sheet"/>
+					<MenuItem Header="Medium Cheatsheet" Click="OnLink" DataContext="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285"/>
+					<MenuItem Header="C# Corner Regex" Click="OnLink" DataContext="https://www.c-sharpcorner.com/article/regular-expressions-in-net/"/>
+					<MenuItem Header="C# Corner Regex Examples" Click="OnLink" DataContext="https://www.c-sharpcorner.com/article/c-sharp-regex-examples/"/>
+					<MenuItem Header="Regex Storm Tester" Click="OnLink" DataContext="http://regexstorm.net/tester"/>
+				</MenuItem>
+				<MenuItem Header="_Examples">
+					<MenuItem Header="Godhead" Click="OnExample" DataContext="And(Or(Regex(\bGod,None),Regex(\bFather)),Or(Regex(\bLord,None),Regex(\bSon,None),Regex(\bJesus,None),Regex(\bChrist),Regex(\bMessiah,None)),Or(Regex(\bspirit),Regex(\bghost)))"/>
+					<MenuItem Header="All Things" Click="OnExample" DataContext="Index(&quot;all things&quot;)"/>
+				</MenuItem>
+				<Separator/>
+				<MenuItem Header="SeekingYHWH _About" Click="OnLink" DataContext="http://seekingyhwh.org/about/"/>
+				<MenuItem Header="SeekingYHWH _Posts" Click="OnLink" DataContext="http://seekingyhwh.org/posts/"/>
+				<MenuItem Header="SeekingYHWH _Scripture Study" Click="OnLink" DataContext="http://seekingyhwh.org/scripture-study/"/>
+				<MenuItem Header="SeekingYHWH _Resources" Click="OnLink" DataContext="http://seekingyhwh.org/resources/"/>
+				<MenuItem Header="SeekingYHWH _Torah" Click="OnLink" DataContext="http://seekingyhwh.org/torah/"/>
+				<MenuItem Header="SeekingYHWH _Law of Moses" Click="OnLink" DataContext="http://seekingyhwh.org/law-of-moses/"/>
+				<MenuItem Header="SeekingYHWH Lectures on _Faith" Click="OnLink" DataContext="http://seekingyhwh.org/lectures-on-faith/"/>
+				<MenuItem Header="SeekingYHWH S_oftware" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/"/>
+				<MenuItem Header="SeekingYHWH Scriptures Search _Download" Click="OnLink" DataContext="https://seekingyhwh.org/resources/software/scriptures-search/"/>
+				<MenuItem Header="SeekingYHWH _Contact" Click="OnLink" DataContext="https://seekingyhwh.org/contact/"/>
+				<MenuItem Header="SeekingYHWH _Contact" Click="OnLink" DataContext="https://seekingyhwh.org/contact/"/>
+				<MenuItem Header="SeekingYHWH.Scriptures Source Code" Click="OnLink" DataContext="https://github.com/SJR3t2/SeekingYHWH.Scriptures"/>
+				<MenuItem Header="SeekingYHWH.Scriptures.Search Text" Click="OnLink" DataContext="https://github.com/SeekingYHWH/SeekingYHWH.Scriptures.Search"/>
+			</MenuItem>
+		</Menu>
+		<StatusBar DockPanel.Dock="Bottom">
+			<StatusBarItem>
+				<TextBlock Text="Scriptures: 0" x:Name="scripturesCount"/>
+			</StatusBarItem>
+			<Separator/>
+			<StatusBarItem>
+				<TextBlock Text="Selected: 0" x:Name="selectedsCount"/>
+			</StatusBarItem>
+			<Separator/>
+			<StatusBarItem>
+				<TextBlock Text="Took: 00:00:00.000" x:Name="took"/>
+			</StatusBarItem>
+		</StatusBar>
+		<Label DockPanel.Dock="Top" Content="Query:" HorizontalAlignment="Left"/>
+		<TextBox DockPanel.Dock="Top" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" Height="50" x:Name="queryText"/>
+		<StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Content="Copy All" Click="OnScripturesCopyAll"/>
+			<Button Content="Copy Selected" Click="OnScripturesCopySelected"/>
+			<Button Content="Clear Selected" Click="OnScripturesClearSelected"/>
+			<Button Content="Search" IsDefault="True" Click="OnSearch"/>
+		</StackPanel>
+		<ListView SelectionMode="Multiple" x:Name="found" SelectionChanged="OnSelectedChanged">
+		</ListView>
+	</DockPanel>
 </Window>
