@@ -126,12 +126,7 @@ internal static class Program
 					goto Language;
 
 				case "use":
-					using (var reader = new FileStream(tsvPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-					using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-					using (var writer = new BrotliStream(writerStream, CompressionLevel.SmallestSize))
-					{
-						reader.CopyTo(writer);
-					}
+					Compression.Compress(tsvPath, brPath);
 					File.Delete(tsvPath);
 					byte[] hash;
 					using (var readerFile = new FileStream(brPath, FileMode.Open, FileAccess.Read, FileShare.Read))
