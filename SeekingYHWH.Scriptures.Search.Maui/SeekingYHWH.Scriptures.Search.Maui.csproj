@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android</TargetFrameworks>
+		<TargetFrameworks>net10.0-android</TargetFrameworks>
 		<!--<TargetFrameworks>net9.0-android</TargetFrameworks>-->
 		<!--<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>-->
 		<!--<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>-->
@@ -26,24 +26,21 @@
 		<ApplicationVersion>3</ApplicationVersion>
 
 	</PropertyGroup>
-
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
-		<SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion>21</TargetPlatformMinVersion>
+		<TargetOSPlatformVersion>21</TargetOSPlatformVersion>
 	</PropertyGroup>
-
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
 		<SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
-
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
 		<SupportedOSPlatformVersion>11.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
-
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
 		<SupportedOSPlatformVersion>13.1</SupportedOSPlatformVersion>
 	</PropertyGroup>
-
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">
 		<SupportedOSPlatformVersion>6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
