@@ -102,12 +102,7 @@ internal static class Program
 				}
 			}
 
-			using (var readerStream = new FileStream(brPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-			using (var reader = new BrotliStream(readerStream, CompressionMode.Decompress))
-			using (var writer = new FileStream(tsvPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-			{
-				reader.CopyTo(writer);
-			}
+			Compression.Decompress(brPath, tsvPath);
 
 			Console.WriteLine();
 			Console.WriteLine("Open: {0}", tsvPath);
