@@ -128,18 +128,8 @@ internal static class Program
 				case "use":
 					Compression.Compress(tsvPath, brPath);
 					File.Delete(tsvPath);
-					byte[] hash;
-					using (var readerFile = new FileStream(brPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-					using (var readerStream = new BrotliStream(readerFile, CompressionMode.Decompress))
-					using (var hasher = SHA256.Create())
-					{
-						hash = hasher.ComputeHash(readerStream);
-					}
 					var hashPath = BookInfosPaths.GetHashPath(languagePath);
-					using (var writerFile = new FileStream(hashPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-					{
-						writerFile.Write(hash, 0, hash.Length);
-					}
+					Hash.ComputeBR(brPath, hashPath);
 					goto Language;
 				}
 			}
