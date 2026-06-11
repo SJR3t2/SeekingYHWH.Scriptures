@@ -11,7 +11,7 @@
 				<TextCell Text="Resources" Detail="https://seekingyhwh.org/resources/" Tapped="OnLink"/>
 				<TextCell Text="Churches" Detail="https://seekingyhwh.org/resources/churches/" Tapped="OnLink"/>
 				<TextCell Text="Software" Detail="https://seekingyhwh.org/resources/software/" Tapped="OnLink"/>
-				<TextCell Text="SeekingYHWH.Scriptures.Search Source Code" Detail="https://github.com/SJR3t2/SeekingYHWH.Scriptures" Tapped="OnLink"/>
+				<TextCell Text="SeekingYHWH.Scriptures Source Code" Detail="https://github.com/SJR3t2/SeekingYHWH.Scriptures" Tapped="OnLink"/>
 			</TableSection>
 			<TableSection Title="SeekingYHWH">
 				<TextCell Text="Book of Mormon" Detail="https://seekingyhwh.org/resources/book-of-mormon/" Tapped="OnLink"/>
