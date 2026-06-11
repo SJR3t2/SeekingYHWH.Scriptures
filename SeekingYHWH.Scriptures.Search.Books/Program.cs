@@ -19,7 +19,7 @@ internal static class Program
 		}
 
 		Prepare();
-		return Run();
+		return Execute();
 	}
 
 	private static string scripturesPath = @"D:\Projects\SeekingYHWH.Scriptures.Search";
@@ -56,7 +56,7 @@ internal static class Program
 		GC.Collect();
 	}
 
-	private static int Run()
+	private static int Execute()
 	{
 		LanguagesRead();
 
