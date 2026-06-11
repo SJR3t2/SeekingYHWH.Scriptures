@@ -33,16 +33,7 @@ internal static class Program
 		scripturesPath = BookInfosPaths.GetFolder(scripturesPath, languageInfo);
 
 		var hshPath = Path.Combine(scripturesPath, bookInfo.Code + ".tsv.hsh");
-		byte[] hash;
-		using (var hasher = SHA256.Create())
-		using (var reader = new FileStream(bookPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-		{
-			hash = hasher.ComputeHash(reader);
-		}
-		using (var writer = new FileStream(hshPath, FileMode.Create, FileAccess.Write, FileShare.Read))
-		{
-			writer.Write(hash, 0, hash.Length);
-		}
+		Hash.ComputeTSV(bookPath, hshPath);
 
 		var brPath = Path.Combine(scripturesPath, bookInfo.Code + ".tsv.br");
 		using (var writerStream = new FileStream(brPath, FileMode.Create, FileAccess.Write, FileShare.Read))
