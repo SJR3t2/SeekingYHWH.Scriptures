@@ -63,25 +63,25 @@ public sealed class LanguageInfosReader : IDisposable
 		}
 	}
 
-	public static void ReadBR(string path, Dictionary<string, int> values)
+	public static void ReadBR(string path, List<LanguageInfo> values, Dictionary<string, int> offsets)
 	{
 		using (var reader = OpenBR(path))
 		{
 			while (reader.TryRead(out var value))
 			{
-				values.Add(value.Code, values.Count);
+				offsets.Add(value.Code, values.Count);
+				values.Add(value);
 			}
 		}
 	}
 
-	public static void ReadBR(string path, List<LanguageInfo> values, Dictionary<string, int> dictionary)
+	public static void ReadBR(string path, Dictionary<string, LanguageInfo> values)
 	{
 		using (var reader = OpenBR(path))
 		{
 			while (reader.TryRead(out var value))
 			{
-				dictionary.Add(value.Code, values.Count);
-				values.Add(value);
+				values.Add(value.Code, value);
 			}
 		}
 	}
