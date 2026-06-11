@@ -36,5 +36,6 @@
     <Project Path="SeekingYHWH.Scriptures.Search.Book/SeekingYHWH.Scriptures.Search.Book.csproj" />
     <Project Path="SeekingYHWH.Scriptures.Search.BookAdd/SeekingYHWH.Scriptures.Search.BookAdd.csproj" />
     <Project Path="SeekingYHWH.Scriptures.Search.Books/SeekingYHWH.Scriptures.Search.Books.csproj" />
+    <Project Path="SeekingYHWH.Scriptures.Search.Languages/SeekingYHWH.Scriptures.Search.Languages.csproj" Id="b4d59437-444c-4783-93c1-2a462bae2c66" />
   </Folder>
 </Solution>
