@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SeekingYHWH.Scriptures"
         mc:Ignorable="d"
         Title="Scriptures Convert Passages - SeekingYHWH"
-		  Height="450" Width="800">
+		  Height="450" Width="800" Loaded="OnLoaded">
 	<DockPanel LastChildFill="True">
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">

@@ -58,6 +58,11 @@ public partial class MainWindow : Window
 		}
 	}
 
+	private void OnLoaded(object sender, RoutedEventArgs args)
+	{
+		passagesText.Focus();
+	}
+
 	private void OnOptions(object sender, RoutedEventArgs args)
 	{
 		var dialog = new OptionsWindow(options);
