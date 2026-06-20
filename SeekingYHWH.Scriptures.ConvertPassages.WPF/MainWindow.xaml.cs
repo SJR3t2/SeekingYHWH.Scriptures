@@ -36,7 +36,7 @@ public partial class MainWindow : Window
 		}
 		catch
 		{
-			//Nothing on purpse
+			//Nothing on purpose
 		}
 		options.Read(optionsPath);
 		options.ClearChanged();
