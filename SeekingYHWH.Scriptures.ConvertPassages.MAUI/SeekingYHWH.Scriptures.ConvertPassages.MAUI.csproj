@@ -79,6 +79,9 @@
 	  <Compile Update="ConvertPage.xaml.cs">
 	    <DependentUpon>ConvertPage.xaml</DependentUpon>
 	  </Compile>
+		<Compile Update="OptionsPage.xaml">
+			<DependentUpon></DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 </Project>
