@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.ConvertPassages.MAUI.ConvertPage">
+	<Grid RowDefinitions="Auto,Auto,*">
+		<Editor Placeholder="Passages" AutoSize="TextChanges" TextChanged="OnTextChanged" Grid.Row="0" x:Name="passagesEditor"/>
+		<Grid RowDefinitions="*,Auto,*,Auto,Auto,Auto" Grid.Row="1">
+			<Label Grid.Column="0" HorizontalOptions="End" x:Name="fromLabel"/>
+			<Button Grid.Column="1" HorizontalOptions="Center" Text="->" x:Name="directionButton"/>
+			<Label Grid.Column="2" HorizontalOptions="Start" x:Name="toLabel"/>
+			<Button Grid.Column="3" HorizontalOptions="Center" Text="Clear" Clicked="OnClear"/>
+			<Button Grid.Column="4" HorizontalOptions="Center" Text="Copy" Clicked="OnCopy"/>
+			<Button Grid.Column="5" HorizontalOptions="Center"  Text="Convert" Clicked="OnConvert"/>
+		</Grid>
+		<Editor Grid.Row="2" IsReadOnly="True" x:Name="convertedText"/>
+	</Grid>
+</ContentPage>

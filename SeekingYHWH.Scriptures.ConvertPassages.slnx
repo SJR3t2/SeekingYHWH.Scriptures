@@ -1,5 +1,8 @@
 <Solution>
   <Project Path="SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV/SeekingYHWH.Scriptures.ConvertPassages.AddCloseChapterTSV.csproj" />
+  <Project Path="SeekingYHWH.Scriptures.ConvertPassages.MAUI/SeekingYHWH.Scriptures.ConvertPassages.MAUI.csproj" Id="c785d1cf-d8b0-4802-a179-24b86ad775a6">
+    <Deploy Solution="Debug|*" />
+  </Project>
   <Project Path="SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV/SeekingYHWH.Scriptures.ConvertPassages.ReverseTSV.csproj" />
   <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UI/SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
   <Project Path="SeekingYHWH.Scriptures.ConvertPassages.UnitTests/SeekingYHWH.Scriptures.ConvertPassages.UnitTests.csproj" />
