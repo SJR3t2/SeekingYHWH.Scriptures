@@ -6,8 +6,6 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
-		Stores.Prepare(FileSystem.CacheDirectory);
-
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
