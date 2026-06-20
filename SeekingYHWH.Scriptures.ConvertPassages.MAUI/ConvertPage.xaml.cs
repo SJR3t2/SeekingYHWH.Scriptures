@@ -2,11 +2,14 @@
 {
 	public partial class ConvertPage : ContentPage
 	{
-		int count = 0;
-
 		public ConvertPage()
 		{
 			InitializeComponent();
+		}
+
+		private void OnLoaded(object? sender, EventArgs args)
+		{
+			passagesText.Focus();
 		}
 
 		private void OnTextChanged(object? sender, EventArgs args)
