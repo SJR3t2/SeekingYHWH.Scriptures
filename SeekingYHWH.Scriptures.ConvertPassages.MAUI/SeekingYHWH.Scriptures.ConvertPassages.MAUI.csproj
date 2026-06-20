@@ -71,6 +71,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.ConvertPassages.UI\SeekingYHWH.Scriptures.ConvertPassages.UI.csproj" />
+	  <ProjectReference Include="..\SeekingYHWH.Scriptures.ConvertPassages\SeekingYHWH.Scriptures.ConvertPassages.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="ConvertPage.xaml.cs">
 	    <DependentUpon>ConvertPage.xaml</DependentUpon>
 	  </Compile>
