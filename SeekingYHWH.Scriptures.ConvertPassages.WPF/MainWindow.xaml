@@ -56,9 +56,9 @@
 			<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" x:Name="fromLabel"/>
 			<Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Content="->" x:Name="directionButton"/>
 			<Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" x:Name="toLabel"/>
-			<Button Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" Content="Clear" Click="OnClear"/>
-			<Button Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" Content="Copy" Click="OnCopy"/>
-			<Button Grid.Row="0" Grid.Column="5" HorizontalAlignment="Right" Content="Convert" IsDefault="True" Click="OnConvert"/>
+			<Button Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" Content="Clear" Click="OnClear"/>
+			<Button Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" Content="Copy" Click="OnCopy"/>
+			<Button Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" Content="Convert" IsDefault="True" Click="OnConvert"/>
 		</Grid>
 		<TextBox IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" x:Name="convertedText"/>
 	</DockPanel>
