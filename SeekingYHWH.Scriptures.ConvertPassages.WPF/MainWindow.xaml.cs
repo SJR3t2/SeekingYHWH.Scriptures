@@ -65,7 +65,10 @@ public partial class MainWindow : Window
 
 	private void OnOptions(object sender, RoutedEventArgs args)
 	{
-		var dialog = new OptionsWindow(options);
+		var dialog = new OptionsWindow()
+		{
+			DataContext = options,
+		};
 		dialog.ShowDialog();
 		if (options.Changed)
 		{

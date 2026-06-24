@@ -19,9 +19,8 @@ namespace SeekingYHWH.Scriptures
 	/// </summary>
 	public partial class OptionsWindow : Window
 	{
-		public OptionsWindow(Options options)
+		public OptionsWindow()
 		{
-			this.DataContext = options;
 			InitializeComponent();
 		}
 
