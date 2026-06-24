@@ -1,17 +1,16 @@
-﻿namespace SeekingYHWH.Scriptures.ConvertPassages.MAUI
-{
-	public partial class AppShell : Shell
-	{
-		public AppShell()
-		{
-			InitializeComponent();
+﻿namespace SeekingYHWH.Scriptures.ConvertPassages.MAUI;
 
-			var convertPage = new ShellContent()
-			{
-				Title = "Convert",
-				Content = new ConvertPage(),
-			};
-			this.Items.Add(convertPage);
-		}
+public partial class AppShell : Shell
+{
+	public AppShell()
+	{
+		InitializeComponent();
+
+		var convertPage = new ShellContent()
+		{
+			Title = "Convert",
+			Content = new ConvertPage(),
+		};
+		this.Items.Add(convertPage);
 	}
 }
