@@ -12,5 +12,15 @@ public partial class AppShell : Shell
 			Content = new ConvertPage(),
 		};
 		this.Items.Add(convertPage);
+
+		var optionsPage = new ShellContent()
+		{
+			Title = "Options",
+			Content = new OptionsPage()
+			{
+				BindingContext = State.Options,
+			},
+		};
+		this.Items.Add(optionsPage);
 	}
 }
