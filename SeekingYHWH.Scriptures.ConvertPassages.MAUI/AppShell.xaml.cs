@@ -22,5 +22,12 @@ public partial class AppShell : Shell
 			},
 		};
 		this.Items.Add(optionsPage);
+
+		var linksPage = new ShellContent()
+		{
+			Title = "Links",
+			Content = new LinksPage(),
+		};
+		this.Items.Add(linksPage);
 	}
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net10.0-android</TargetFrameworks>
@@ -79,8 +79,11 @@
 	  <Compile Update="ConvertPage.xaml.cs">
 	    <DependentUpon>ConvertPage.xaml</DependentUpon>
 	  </Compile>
-		<Compile Update="OptionsPage.xaml">
-			<DependentUpon></DependentUpon>
+	  <Compile Update="LinksPage.xaml.cs">
+	    <DependentUpon>LinksPage.xaml</DependentUpon>
+	  </Compile>
+		<Compile Update="OptionsPage.xaml.cs">
+			<DependentUpon>OptionsPage.xaml</DependentUpon>
 		</Compile>
 	</ItemGroup>
 

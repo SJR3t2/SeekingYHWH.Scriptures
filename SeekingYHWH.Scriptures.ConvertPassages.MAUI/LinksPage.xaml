@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeekingYHWH.Scriptures.ConvertPassages.MAUI.LinksPage"
+             Title="NewPage1">
+    <TableView Intent="Menu">
+		<TableSection Title="Author">
+			<TextCell Text="About" Detail="https://seekingyhwh.org/about/" Tapped="OnLink"/>
+			<TextCell Text="Blog" Detail="https://seekingyhwh.org/posts/" Tapped="OnLink"/>
+			<TextCell Text="Nazarene" Detail="https://seekingyhwh.org/resources/nazarene/" Tapped="OnLink"/>
+			<TextCell Text="Resources" Detail="https://seekingyhwh.org/resources/" Tapped="OnLink"/>
+			<TextCell Text="Churches" Detail="https://seekingyhwh.org/resources/churches/" Tapped="OnLink"/>
+			<TextCell Text="Software" Detail="https://seekingyhwh.org/resources/software/" Tapped="OnLink"/>
+			<TextCell Text="SeekingYHWH.Scriptures Source Code" Detail="https://github.com/SJR3t2/SeekingYHWH.Scriptures" Tapped="OnLink"/>
+			<TextCell Text="SeekingYHWH.Scriptures.Search Text" Detail="https://github.com/SeekingYHWH/SeekingYHWH.Scriptures.Search" Tapped="OnLink"/>
+		</TableSection>
+	</TableView>
+</ContentPage>
