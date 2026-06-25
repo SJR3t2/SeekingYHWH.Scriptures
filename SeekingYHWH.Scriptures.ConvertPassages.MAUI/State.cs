@@ -13,4 +13,9 @@ internal static class State
 	{
 		Options.Read(optionsPath);
 	}
+
+	public static void OptionsWrite()
+	{
+		Options.Write(optionsPath);
+	}
 }
