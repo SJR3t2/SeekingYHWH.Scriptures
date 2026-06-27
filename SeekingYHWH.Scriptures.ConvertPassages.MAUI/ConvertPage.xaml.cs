@@ -123,9 +123,4 @@ public partial class ConvertPage : ContentPage
 	{
 		convertedText.Text = string.Empty;
 	}
-
-	private void OnTextChanged(object? sender, EventArgs args)
-	{
-		throw new NotImplementedException();
-	}
 }
