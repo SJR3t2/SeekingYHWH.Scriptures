@@ -12,6 +12,7 @@ internal static class State
 	public static void Prepare()
 	{
 		Options.Read(optionsPath);
+		Options.ClearChanged();
 	}
 
 	public static void OptionsWrite()
