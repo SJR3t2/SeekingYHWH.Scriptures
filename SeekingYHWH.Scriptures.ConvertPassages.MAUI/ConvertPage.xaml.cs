@@ -53,7 +53,7 @@ public partial class ConvertPage : ContentPage
 		directionButton.Clicked += OnLDSToRLDS;
 	}
 
-	private void OnConvert(object? sender, EventArgs args)
+	private async void OnConvert(object? sender, EventArgs args)
 	{
 		try
 		{
@@ -64,7 +64,7 @@ public partial class ConvertPage : ContentPage
 		{
 			convertedText.Text = string.Empty;
 
-			DisplayAlert("Error", "Can't Convert", "OK");
+			await DisplayAlert("Error", "Can't Convert", "OK");
 
 			return;
 		}
@@ -79,11 +79,11 @@ public partial class ConvertPage : ContentPage
 		default:
 			try
 			{
-				Clipboard.SetTextAsync(convertedText.Text).Wait();
+				await Clipboard.SetTextAsync(convertedText.Text);
 			}
 			catch (Exception exception)
 			{
-				DisplayAlert("Error", "Can't Copy", "OK");
+				await DisplayAlert("Error", "Can't Copy", "OK");
 			}
 			break;
 
@@ -93,11 +93,11 @@ public partial class ConvertPage : ContentPage
 			{
 				try
 				{
-					Clipboard.SetTextAsync(convertedText.Text).Wait();
+					await Clipboard.SetTextAsync(convertedText.Text);
 				}
 				catch (Exception exception)
 				{
-					DisplayAlert("Error", "Can't Copy", "OK");
+					await DisplayAlert("Error", "Can't Copy", "OK");
 				}
 			}
 			else
@@ -107,15 +107,15 @@ public partial class ConvertPage : ContentPage
 		}
 	}
 
-	private void OnCopy(object? sender, EventArgs args)
+	private async void OnCopy(object? sender, EventArgs args)
 	{
 		try
 		{
-			Clipboard.SetTextAsync(convertedText.Text).Wait();
+			await Clipboard.SetTextAsync(convertedText.Text);
 		}
 		catch (Exception exception)
 		{
-			DisplayAlert("Error", "Can't Copy", "OK");
+			await DisplayAlert("Error", "Can't Copy", "OK");
 		}
 	}
 
