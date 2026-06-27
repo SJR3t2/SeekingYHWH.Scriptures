@@ -107,17 +107,24 @@ public partial class ConvertPage : ContentPage
 		}
 	}
 
+	private void OnCopy(object? sender, EventArgs args)
+	{
+		try
+		{
+			Clipboard.SetTextAsync(convertedText.Text).Wait();
+		}
+		catch (Exception exception)
+		{
+			DisplayAlert("Error", "Can't Copy", "OK");
+		}
+	}
+
 	private void OnTextChanged(object? sender, EventArgs args)
 	{
 		throw new NotImplementedException();
 	}
 
 	private void OnClear(object? sender, EventArgs args)
-	{
-		throw new NotImplementedException();
-	}
-
-	private void OnCopy(object? sender, EventArgs args)
 	{
 		throw new NotImplementedException();
 	}
