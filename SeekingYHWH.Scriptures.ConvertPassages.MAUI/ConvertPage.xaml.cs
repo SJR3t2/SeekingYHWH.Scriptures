@@ -53,6 +53,60 @@ public partial class ConvertPage : ContentPage
 		directionButton.Clicked += OnLDSToRLDS;
 	}
 
+	private void OnConvert(object? sender, EventArgs args)
+	{
+		try
+		{
+			var value = passagesText.Text;
+			convertedText.Text = converter.Convert(value);
+		}
+		catch (Exception exception)
+		{
+			convertedText.Text = string.Empty;
+
+			DisplayAlert("Error", "Can't Convert", "OK");
+
+			return;
+		}
+		switch (options.Convert)
+		{
+		case "N":
+		case "n":
+			break;
+
+		case "A":
+		case "a":
+		default:
+			try
+			{
+				Clipboard.SetTextAsync(convertedText.Text).Wait();
+			}
+			catch (Exception exception)
+			{
+				DisplayAlert("Error", "Can't Copy", "OK");
+			}
+			break;
+
+		case "S":
+		case "s":
+			if (!converter.Error)
+			{
+				try
+				{
+					Clipboard.SetTextAsync(convertedText.Text).Wait();
+				}
+				catch (Exception exception)
+				{
+					DisplayAlert("Error", "Can't Copy", "OK");
+				}
+			}
+			else
+			{
+			}
+			break;
+		}
+	}
+
 	private void OnTextChanged(object? sender, EventArgs args)
 	{
 		throw new NotImplementedException();
@@ -64,11 +118,6 @@ public partial class ConvertPage : ContentPage
 	}
 
 	private void OnCopy(object? sender, EventArgs args)
-	{
-		throw new NotImplementedException();
-	}
-
-	private void OnConvert(object? sender, EventArgs args)
 	{
 		throw new NotImplementedException();
 	}
