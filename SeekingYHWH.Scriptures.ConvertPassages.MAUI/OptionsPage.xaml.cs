@@ -2,9 +2,16 @@ namespace SeekingYHWH.Scriptures.ConvertPassages.MAUI;
 
 public partial class OptionsPage : ContentPage
 {
-	public OptionsPage()
+	private string optionsPath;
+	private Options options;
+
+	public OptionsPage(string optionsPath, Options options)
 	{
 		InitializeComponent();
+
+		this.optionsPath = optionsPath;
+		this.options = options;
+		this.BindingContext = options;
 	}
 
 	private void OnLDSBoMS(object sender, EventArgs args)
@@ -95,5 +102,16 @@ public partial class OptionsPage : ContentPage
 		rldsBoMPre.Text = string.Empty;
 		rldsBoMCenter.Text = null;
 		rldsBoMPost.Text = string.Empty;
+	}
+
+	protected override void OnDisappearing()
+	{
+		base.OnDisappearing();
+
+		if (options.Changed)
+		{
+			options.Write(optionsPath);
+			options.ClearChanged();
+		}
 	}
 }

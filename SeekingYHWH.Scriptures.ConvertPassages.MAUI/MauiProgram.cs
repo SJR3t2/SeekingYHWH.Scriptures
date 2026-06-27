@@ -6,8 +6,6 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
-		State.Prepare();
-
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
