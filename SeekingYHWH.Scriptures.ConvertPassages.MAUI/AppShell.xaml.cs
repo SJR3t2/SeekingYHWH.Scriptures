@@ -29,5 +29,12 @@ public partial class AppShell : Shell
 			Content = new LinksPage(),
 		};
 		this.Items.Add(linksPage);
+
+		var excludedPage = new ShellContent()
+		{
+			Title = "Excluded",
+			Content = new ExcludedPage(),
+		};
+		this.Items.Add(excludedPage);
 	}
 }

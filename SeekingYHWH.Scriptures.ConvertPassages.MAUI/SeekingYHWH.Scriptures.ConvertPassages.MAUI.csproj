@@ -79,7 +79,10 @@
 	  <Compile Update="ConvertPage.xaml.cs">
 	    <DependentUpon>ConvertPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="LinksPage.xaml.cs">
+		<Compile Update="ExcludedPage.xaml.cs">
+			<DependentUpon>ExcludedPage.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="LinksPage.xaml.cs">
 	    <DependentUpon>LinksPage.xaml</DependentUpon>
 	  </Compile>
 		<Compile Update="OptionsPage.xaml.cs">
