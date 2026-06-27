@@ -119,12 +119,12 @@ public partial class ConvertPage : ContentPage
 		}
 	}
 
-	private void OnTextChanged(object? sender, EventArgs args)
+	private void OnClear(object? sender, EventArgs args)
 	{
-		throw new NotImplementedException();
+		convertedText.Text = string.Empty;
 	}
 
-	private void OnClear(object? sender, EventArgs args)
+	private void OnTextChanged(object? sender, EventArgs args)
 	{
 		throw new NotImplementedException();
 	}
