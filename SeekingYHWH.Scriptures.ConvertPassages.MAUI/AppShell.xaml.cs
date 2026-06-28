@@ -2,12 +2,12 @@
 
 public partial class AppShell : Shell
 {
+	private readonly string optionsPath = Path.Combine(FileSystem.CacheDirectory, "Options.tsv");
+	private readonly Options options = new Options();
+
 	public AppShell()
 	{
 		InitializeComponent();
-
-		var optionsPath = Path.Combine(FileSystem.CacheDirectory, "Options.tsv");
-		var options = new Options();
 
 		options.Read(optionsPath);
 		options.ClearChanged();
@@ -20,25 +20,24 @@ public partial class AppShell : Shell
 		};
 		this.Items.Add(convertContent);
 
-		var optionsPage = new OptionsPage(optionsPath, options);
 		var optionsContent = new ShellContent()
 		{
 			Title = "Options",
-			Content = optionsPage,
+			ContentTemplate = new DataTemplate(() => new OptionsPage(optionsPath, options)),
 		};
 		this.Items.Add(optionsContent);
 
 		var linksContent = new ShellContent()
 		{
 			Title = "Links",
-			Content = new LinksPage(),
+			ContentTemplate = new DataTemplate(() => new LinksPage()),
 		};
 		this.Items.Add(linksContent);
 
 		var excludedContent = new ShellContent()
 		{
 			Title = "Excluded",
-			Content = new ExcludedPage(),
+			ContentTemplate = new DataTemplate(() => new ExcludedPage()),
 		};
 		this.Items.Add(excludedContent);
 	}
