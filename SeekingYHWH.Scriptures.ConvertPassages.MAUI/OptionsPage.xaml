@@ -28,6 +28,8 @@
 			</Border>
 			<Border>
 				<VerticalStackLayout>
+					<Label Text="LDS -> RLDS" FontSize="16" FontAttributes="Bold"/>
+					<BoxView HeightRequest="1" HorizontalOptions="Fill"/>
 					<Border>
 						<VerticalStackLayout>
 							<Label Text="Book of Mormon" FontSize="16" FontAttributes="Bold"/>
