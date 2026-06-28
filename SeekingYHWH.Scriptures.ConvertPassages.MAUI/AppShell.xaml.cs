@@ -12,10 +12,13 @@ public partial class AppShell : Shell
 		options.Read(optionsPath);
 		options.ClearChanged();
 
+		var convertIcon = new FileImageSource();
+		convertIcon.SetAppTheme<string>(FileImageSource.FileProperty, "convertlight.svg", "convertdark.svg");
 		var convertPage = new ConvertPage(options);
 		var convertContent = new ShellContent()
 		{
 			Title = "Convert",
+			Icon = convertIcon,
 			Content = convertPage,
 		};
 		this.Items.Add(convertContent);
