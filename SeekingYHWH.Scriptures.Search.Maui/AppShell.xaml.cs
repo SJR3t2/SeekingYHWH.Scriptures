@@ -9,75 +9,75 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-		var searchPageIcon = new FileImageSource();
+		var searchIcon = new FileImageSource();
 		searchPage = new SearchPage();
 		searchShell = new ShellContent()
 		{
 			Title = "Search",
-			Icon = searchPageIcon,
+			Icon = searchIcon,
 			Content = searchPage,
 		};
-		searchPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "searchlight.svg", "searchdark.svg");
+		searchIcon.SetAppTheme<string>(FileImageSource.FileProperty, "searchlight.svg", "searchdark.svg");
 		this.Items.Add(searchShell);
 
-		var optionsPageIcon = new FileImageSource();
+		var optionsIcon = new FileImageSource();
 		var optionsPage = new ShellContent()
 		{
 			Title = "Options",
-			Icon = optionsPageIcon,
+			Icon = optionsIcon,
 			Content = new OptionsPage(),
 		};
-		optionsPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "optionslight.svg", "optionsdark.svg");
+		optionsIcon.SetAppTheme<string>(FileImageSource.FileProperty, "optionslight.svg", "optionsdark.svg");
 		this.Items.Add(optionsPage);
 
-		var downloadPageIcon = new FileImageSource();
+		var downloadIcon = new FileImageSource();
 		var downloadPage = new ShellContent()
 		{
 			Title = "Download",
-			Icon = downloadPageIcon,
+			Icon = downloadIcon,
 			Content = new DownloadPage(),
 		};
-		downloadPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "downloadlight.svg", "downloaddark.svg");
+		downloadIcon.SetAppTheme<string>(FileImageSource.FileProperty, "downloadlight.svg", "downloaddark.svg");
 		this.Items.Add(downloadPage);
 
-		var linksPageIcon = new FileImageSource();
+		var linksIcon = new FileImageSource();
 		var linksPage = new ShellContent()
 		{
 			Title = "Links",
-			Icon = linksPageIcon,
+			Icon = linksIcon,
 			Content = new LinksPage(),
 		};
-		linksPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "linkslight.svg", "linksdark.svg");
+		linksIcon.SetAppTheme<string>(FileImageSource.FileProperty, "linkslight.svg", "linksdark.svg");
 		this.Items.Add(linksPage);
 
-		var excludedPageIcon = new FileImageSource();
+		var excludedIcon = new FileImageSource();
 		var excludedPage = new ShellContent()
 		{
 			Title = "Excluded",
-			Icon = excludedPageIcon,
+			Icon = excludedIcon,
 			Content = new ExcludedPage(),
 		};
-		excludedPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "excludedlight.svg", "excludeddark.svg");
+		excludedIcon.SetAppTheme<string>(FileImageSource.FileProperty, "excludedlight.svg", "excludeddark.svg");
 		this.Items.Add(excludedPage);
 
-		var examplesPageIcon = new FileImageSource();
+		var examplesIcon = new FileImageSource();
 		var examplesPage = new ShellContent()
 		{
 			Title = "Examples",
-			Icon = examplesPageIcon,
+			Icon = examplesIcon,
 			Content = new ExamplesPage(),
 		};
-		examplesPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "exampleslight.svg", "examplesdark.svg");
+		examplesIcon.SetAppTheme<string>(FileImageSource.FileProperty, "exampleslight.svg", "examplesdark.svg");
 		this.Items.Add(examplesPage);
 
-		var querysPageIcon = new FileImageSource();
+		var querysIcon = new FileImageSource();
 		var querysPage = new ShellContent()
 		{
 			Title = "Queries",
-			Icon = querysPageIcon,
+			Icon = querysIcon,
 			Content = new QuerysPage(),
 		};
-		querysPageIcon.SetAppTheme<string>(FileImageSource.FileProperty, "queryslight.svg", "querysdark.svg");
+		querysIcon.SetAppTheme<string>(FileImageSource.FileProperty, "queryslight.svg", "querysdark.svg");
 		this.Items.Add(querysPage);
 
 		if (Languages.Locals.Count <= 0)
