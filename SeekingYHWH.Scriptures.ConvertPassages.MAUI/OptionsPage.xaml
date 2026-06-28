@@ -28,7 +28,7 @@
 			</Border>
 			<Border>
 				<VerticalStackLayout>
-					<Label Text="LDS -> RLDS" FontSize="16" FontAttributes="Bold"/>
+					<Label Text="LDS -> RLDS" FontSize="18" FontAttributes="Bold"/>
 					<BoxView HeightRequest="1" HorizontalOptions="Fill"/>
 					<Border>
 						<VerticalStackLayout>
@@ -75,7 +75,7 @@
 			</Border>
 			<Border>
 				<VerticalStackLayout>
-					<Label Text="RLDS -> LDS" FontSize="16" FontAttributes="Bold"/>
+					<Label Text="RLDS -> LDS" FontSize="18" FontAttributes="Bold"/>
 					<BoxView HeightRequest="1" HorizontalOptions="Fill"/>
 					<Border>
 						<VerticalStackLayout>
