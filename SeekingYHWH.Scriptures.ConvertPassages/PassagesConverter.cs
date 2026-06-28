@@ -94,6 +94,10 @@ public sealed class PassagesConverter
 
 	public string Convert(string value)
 	{
+		if (string.IsNullOrEmpty(value))
+		{
+			return value;
+		}
 		builder.Clear();
 		error = false;
 		var valueLength = value.Length;
