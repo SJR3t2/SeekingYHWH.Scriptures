@@ -47,6 +47,12 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyStore>SeekingYHWH.Scriptures.ConvertPassages.MAUI.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias>SeekingYHWH.Scriptures.ConvertPassages.MAUI</AndroidSigningKeyAlias>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
