@@ -20,23 +20,32 @@ public partial class AppShell : Shell
 		};
 		this.Items.Add(convertContent);
 
+		var optionsIcon = new FileImageSource();
+		optionsIcon.SetAppTheme<string>(FileImageSource.FileProperty, "optionslight.svg", "optionsdark.svg");
 		var optionsContent = new ShellContent()
 		{
 			Title = "Options",
+			Icon = optionsIcon,
 			ContentTemplate = new DataTemplate(() => new OptionsPage(optionsPath, options)),
 		};
 		this.Items.Add(optionsContent);
 
+		var linksIcon = new FileImageSource();
+		linksIcon.SetAppTheme<string>(FileImageSource.FileProperty, "linkslight.svg", "linksdark.svg");
 		var linksContent = new ShellContent()
 		{
 			Title = "Links",
+			Icon = linksIcon,
 			ContentTemplate = new DataTemplate(() => new LinksPage()),
 		};
 		this.Items.Add(linksContent);
 
+		var excludedIcon = new FileImageSource();
+		excludedIcon.SetAppTheme<string>(FileImageSource.FileProperty, "excludedlight.svg", "excludeddark.svg");
 		var excludedContent = new ShellContent()
 		{
 			Title = "Excluded",
+			Icon = excludedIcon,
 			ContentTemplate = new DataTemplate(() => new ExcludedPage()),
 		};
 		this.Items.Add(excludedContent);
